@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from './components/Navigation/Navigation.component';
-import './App.css';
+import './App.scss';
 
 export interface Item {
   name: string;
@@ -9,25 +9,11 @@ export interface Item {
 }
 
 const items: Item[] = [
-  { name: 'Home', url: '/home' },
-  {
-    name: 'Tutorials',
-    children: [
-      { name: 'Beginner', url: '/tutorials/beginner' },
-      { name: 'Intermediate', url: '/tutorials/intermediate' },
-      { name: 'Advanced', url: '/tutorials/advanced' },
-    ],
-  },
-  { name: 'About us', url: '/about' },
-  {
-    name: 'Tutorials2',
-    children: [
-      { name: 'Beginner2', url: '/tutorials/beginner' },
-      { name: 'Intermediate2', url: '/tutorials/intermediate' },
-      { name: 'Advanced2', url: '/tutorials/advanced' },
-    ],
-  },
-  { name: 'Contact', url: '/contact' },
+  { name: 'за нас', url: '/' },
+  { name: 'поливни макари', url: '/' },
+  { name: 'високонапорни помпи', url: '/' },
+  { name: 'галерия', url: '/gallery' },
+  { name: 'контакт', url: '/contact' },
 ];
 
 function App() {
