@@ -54,9 +54,8 @@ const Home = () => {
       end={2000}
       duration={2.75}
       redraw={true}
-      />
-
-      
+      /> 
+      {/* counter still counts from the page load */}
 
       </div>
       <div data-aos="fade-left">
