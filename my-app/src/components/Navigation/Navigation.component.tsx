@@ -5,8 +5,7 @@ import { useState } from 'react';
 import './Navigation.style.scss'
 import { FaAngleDown, FaReact } from 'react-icons/fa'
 import { TbBrandTypescript } from 'react-icons/tb'
-
-
+import { Outlet } from 'react-router-dom';
 interface NavigationProps {
     items: Item[];
 }
@@ -52,7 +51,7 @@ const Navigation = ({ items }: NavigationProps) => {
 
     const closeMenu = (closeSubMenu = false) => {
         setIsToggled(false);
-    
+
         if (closeSubMenu && window.innerWidth > screenSizes.small) {
             setCloseSubMenu(true)
             setTimeout(() => setCloseSubMenu(false), 0)
@@ -60,29 +59,33 @@ const Navigation = ({ items }: NavigationProps) => {
     }
 
     return (
-        <nav>
-            <div className="container">
-                <div className="logo">
-                <FaReact /><span> + </span><TbBrandTypescript/>
+        <div className='main-wrapper'>
+            <div className='under-navigation-layer'></div>
+            <nav>
+                <div className="container">
+                    <div className="logo">
+                        <FaReact /><span> + </span><TbBrandTypescript />
+                    </div>
+                    <div
+                        className={
+                            isToggled
+                                ? 'hamburger close'
+                                : 'hamburger'
+                        }
+                        onClick={() => setIsToggled(!isToggled)}
+                    >
+                        <span className="burger-bar"></span>
+                        <span className="burger-bar"></span>
+                        <span className="burger-bar"></span>
+                        <span className="burger-bar"></span>
+                    </div>
                 </div>
-                <div
-                    className={
-                        isToggled
-                            ? 'hamburger close'
-                            : 'hamburger'
-                    }
-                    onClick={() => setIsToggled(!isToggled)}
-                >
-                    <span className="burger-bar"></span>
-                    <span className="burger-bar"></span>
-                    <span className="burger-bar"></span>
-                    <span className="burger-bar"></span>
-                </div>
-            </div>
-            <ul
-                className={['menu', isToggled && 'active', closeSubMenu && 'closed'].filter(Boolean).join(' ')}
-            >{renderItems()}</ul>
-        </nav>
+                <ul
+                    className={['menu', isToggled && 'active', closeSubMenu && 'closed'].filter(Boolean).join(' ')}
+                >{renderItems()}</ul>
+            </nav>
+            <Outlet />
+        </div>
     )
 }
 

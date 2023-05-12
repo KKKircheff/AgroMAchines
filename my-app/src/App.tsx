@@ -1,6 +1,12 @@
 import React from 'react';
-import Navigation from './components/Navigation/Navigation.component';
 import './App.scss';
+import Home from './routes/home/home.component';
+import { Routes, Route } from 'react-router-dom';
+import Navigation from './components/navigation/Navigation.component';
+import Gallery from './routes/gallery/Gallery.component';
+import Contact from './routes/contact/Contact.component';
+
+
 
 export interface Item {
   name: string;
@@ -15,11 +21,16 @@ const items: Item[] = [
   { name: 'галерия', url: '/gallery' },
   { name: 'контакт', url: '/contact' },
 ];
-
 function App() {
   return (
     <div className="App">
-      <Navigation items={items} />
+      <Routes>
+        <Route path='/' element={<Navigation items={items} />}>
+          <Route index element={<Home/>} />
+          <Route path='gallery' element={<Gallery />} />
+          <Route path='contact' element={<Contact />} />
+        </Route>
+      </Routes>
     </div>
   )
 }

@@ -1,14 +1,27 @@
 @import '../../assets/app.colors.scss';
 * {
     font-family: 'Raleway', sans-serif;
-    color: white;
 }
+nav {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 4;
+    width: 100%;
+}
+.under-navigation-layer{
+height: 40px;
+}
+
+
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     min-height: 30px;
+    color: white;
+  
 }
 
 .logo {
