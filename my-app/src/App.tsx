@@ -3,8 +3,6 @@ import './App.scss';
 import Home from './routes/home/home.component';
 import { Routes, Route } from 'react-router-dom';
 import Navigation from './components/navigation/Navigation.component';
-import Gallery from './routes/gallery/Gallery.component';
-import Contact from './routes/contact/Contact.component';
 
 
 
@@ -27,8 +25,6 @@ function App() {
       <Routes>
         <Route path='/' element={<Navigation items={items} />}>
           <Route index element={<Home/>} />
-          <Route path='gallery' element={<Gallery />} />
-          <Route path='contact' element={<Contact />} />
         </Route>
       </Routes>
     </div>
