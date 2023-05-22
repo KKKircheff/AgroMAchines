@@ -3,7 +3,7 @@ import React from 'react'
 const ContentCard = () => {
   return (
     <div className='content-card'>
-    <div>ContentCard</div>
+    <div>ContentCard Header</div>
     </div>
   )
 }
