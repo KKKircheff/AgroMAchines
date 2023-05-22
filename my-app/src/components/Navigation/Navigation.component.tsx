@@ -12,8 +12,9 @@ interface NavigationProps {
 
 const Navigation = ({ items }: NavigationProps) => {
 
-    const [isToggled, setIsToggled] = useState(true);
+    const [isToggled, setIsToggled] = useState(false);
     const [closeSubMenu, setCloseSubMenu] = useState(false);
+    const [isTransparentNavbar, setIsTransparentNavbar] = useState(false);
 
     const screenSizes = {
         small: 720
@@ -58,10 +59,25 @@ const Navigation = ({ items }: NavigationProps) => {
         }
     }
 
+    const addTransparencyToNavbar = () =>{
+        console.log(window.scrollY)
+        if (window.scrollY >=60) { 
+            setIsTransparentNavbar(true)
+            } else {
+                setIsTransparentNavbar(false)
+            }
+    }
+
+    window.addEventListener('scroll', addTransparencyToNavbar)
+
     return (
         <div className='main-wrapper'>
             <div className='under-navigation-layer'></div>
-            <nav>
+            <nav className={
+                isTransparentNavbar
+                ?'main-navbar active'
+                :'main-navbar'}
+                >
                 <div className="container">
                     <div className="logo">
                         <FaReact /><span> + </span><TbBrandTypescript />
