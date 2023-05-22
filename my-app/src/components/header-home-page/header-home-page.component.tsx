@@ -6,6 +6,8 @@ const HeaderHomePage = () => {
     <div className="header-home-page-wrapper">
         <h1>Поливни системи втора употреба от Нидерландия</h1>
         <p>Some Image</p>
+        <p>counter</p>
+        <button>offers</button>   
     </div>
   )
 }
