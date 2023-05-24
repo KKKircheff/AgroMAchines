@@ -7,49 +7,21 @@ import CountUp from 'react-countup';
 import RenderIfVisible from 'react-render-if-visible';
 import Button from '../../components/button/button.component';
 import HeaderHomePage from '../../components/header-home-page/header-home-page.component';
+import InfoSection from '../../components/info-section/info-section.component';
 
 const Home = () => {
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({duration:800});
     AOS.refresh();
   }, []);
 
   return (
     <div className='home-wrapper'>
+
      <HeaderHomePage />
-      <CountUp
-        start={0}
-        end={2000}
-        duration={2.75}
-      />
-      <div data-aos="fade-right">
-        <h1>Landing Page</h1>
-      </div>
-      <div data-aos="fade-left">
-        <img src="https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="Coffee" />
-      </div>
-
-      <div data-aos="fade-right">
-        <h1>Landing Page</h1>
-      </div>
-      <div data-aos="fade-left">
-        <img src="https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="Coffee" />
-      </div>
-
-      <div data-aos="fade-right">
-        <h1>Landing Page</h1>
-      </div>
-      <div data-aos="fade-left">
-        <img src="https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="Coffee" />
-      </div>
-
-      <div data-aos="fade-right">
-        <h1>Landing Page</h1>
-      </div>
-      <div data-aos="fade-left">
-        <img src="https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="Coffee" />
-      </div>
+     
+     <InfoSection />
 
       <RenderIfVisible visibleOffset={20}>
         <div data-aos="fade-right">
