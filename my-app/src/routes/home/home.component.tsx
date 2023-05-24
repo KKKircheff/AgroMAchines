@@ -5,6 +5,8 @@ import AOS from 'aos';
 import "aos/dist/aos.css";
 import CountUp from 'react-countup';
 import RenderIfVisible from 'react-render-if-visible';
+import Button from '../../components/button/button.component';
+import HeaderHomePage from '../../components/header-home-page/header-home-page.component';
 
 const Home = () => {
 
@@ -15,6 +17,7 @@ const Home = () => {
 
   return (
     <div className='home-wrapper'>
+     <HeaderHomePage />
       <CountUp
         start={0}
         end={2000}
