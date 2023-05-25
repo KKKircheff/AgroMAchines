@@ -1,79 +1,37 @@
 import React from 'react'
-import CountUp from 'react-countup';
-import RenderIfVisible from 'react-render-if-visible';
+import Counter from '../counter/counter.component';
+import ContentCard from '../content-card/content-card.component';
+import { counetrsContent } from '../../couners-content';
+import { cardContent } from '../../content-card-data'
 
 import './info-section.style.scss'
 
-const InfoSection = () => {
 
+const InfoSection = () => {
     return (
         <div className='info-section-wrapper'>
-
-            <div className='info-card' data-aos="fade-in">
-                <RenderIfVisible visibleOffset={1}>
-                    <div className="counter-wrapper">
-                        <CountUp
-                            start={0}
-                            end={33}
-                            duration={2.2}
-                            redraw={true}
-                            className='count-up'
-                        />
-                        <span>+</span>
-                    </div>
-
-                    <div className='separator'></div>
-
-                </RenderIfVisible >
-                <div className='content-wrapper'>
-                    <h2>увеличение на добива</h2>
-                    <h2>при използване на</h2>
-                    <h2>поливни системи</h2>
-                </div>
+            <div className="counter-container">
+                {counetrsContent.map((counterItem, index) => {
+                    return <Counter
+                        key={index}
+                        countFrom={counterItem.countFrom}
+                        countTo={counterItem.countTo}
+                        content={counterItem.content}
+                    />
+                })}
             </div>
-
-            <div className='info-card' data-aos="fade-in">
-                <RenderIfVisible visibleOffset={1}>
-                    <div className="counter-wrapper">
-                        <CountUp
-                            start={0}
-                            end={767}
-                            duration={2.2}
-                            redraw={true}
-                            className='count-up'
-                        />
-                        <span>+</span>
-                    </div>
-                    <div className='separator'></div>
-                </RenderIfVisible >
-                <div className='content-wrapper'>
-                    <h2>различни оферти</h2>
-                    <h2>за поливни системи</h2>
-                    <h2>в Нидерландия</h2>
-                </div>
+            <div className="card-content-container">
+                {cardContent.map((cardItem, index) => {
+                    return <ContentCard
+                        key={index}
+                        url={cardItem.url}
+                        title={cardItem.title}
+                        subtitle={cardItem.subtitle}
+                        content={cardItem.content}
+                        imgSide='left'
+                    />
+                })}
             </div>
-
-            <div className='info-card' data-aos="fade-in">
-                <RenderIfVisible visibleOffset={1}>
-                    <div className="counter-wrapper">
-                        <CountUp
-                            start={0}
-                            end={57}
-                            duration={2.2}
-                            redraw={true}
-                            className='count-up'
-                        />
-                        <span>+</span>
-                    </div>
-                    <div className='separator'></div>
-                </RenderIfVisible >
-                <div className='content-wrapper'>
-                    <h2>доставени машини</h2>
-                    <h2>на клиенти в България</h2>
-                    <h2>от нас!</h2>
-                </div>
-            </div>
-
         </div>
     )
 }
