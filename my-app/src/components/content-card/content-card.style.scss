@@ -3,11 +3,12 @@
 .content-card {
   box-sizing: border-box;
   display: grid;
-  padding: 0;
-  margin: 8vw 0 0 0;
+  padding: 8vw 0 0 0;
+  margin: 0;
   grid-template-rows: 1fr 1fr;
-  background: #ffffff;
-  background: linear-gradient(to top, #ffffff 0%, $background-color 100%);
+//   background: #ffffff;
+//   background: linear-gradient(to top, #ffffff 0%, $background-color 100%);
+  background-color: $background-color;
 
   img {
     object-fit: contain;
@@ -36,31 +37,34 @@
 @media (min-width: 720px) {
   .content-card {
     display: flex;
-    margin: 0;
-    background: linear-gradient(to right, #ffffff 0%, $background-color 100%);
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    padding: 0;
+    box-sizing:border-box;
+    // background: linear-gradient(to right, #ffffff 0%, $background-color 100%);
 
     img {
       object-fit: contain;
-      width: 56%;
+      width: 55%;
       clip-path: ellipse(70% 150% at 30% 50%);
+      padding: 1vw 0;
     }
 
     img:hover {
-      object-fit: cover;
+      object-fit: contain;
+    //   transform: scale(120%);
+    //   transition: transform 0.2s;
       filter: brightness(80%);
-      transition: filter 0.2s; /* Animation */
+      transition: filter 0.2s; 
     }
 
     .content-sectrion {
-      width: 44%;
+      width: 45%;
       padding: 10px 30px 10px 30px;
     }
   }
 
   .right {
-    background: linear-gradient(to left, #ffffff 0%, $background-color 100%);
+    // background: linear-gradient(to left, #ffffff 0%, $background-color 100%);
     img {
       order: 2;
       clip-path: ellipse(70% 150% at 70% 50%);

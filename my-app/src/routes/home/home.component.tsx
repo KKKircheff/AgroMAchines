@@ -39,7 +39,7 @@ const Home = () => {
         imgSide={'left'}
       />
       <ContentCard
-        linkName={urlData.CARD_IMG_1}
+        linkName={urlData.CARD_IMG_2}
         title={'Some title'}
         subtitle={'some subtitle'}
         content={
@@ -48,7 +48,7 @@ const Home = () => {
         imgSide={'right'}
       />
       <ContentCard
-        linkName={urlData.CARD_IMG_1}
+        linkName={urlData.CARD_IMG_3}
         title={'Some title'}
         subtitle={'some subtitle'}
         content={
