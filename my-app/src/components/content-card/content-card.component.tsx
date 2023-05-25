@@ -1,13 +1,26 @@
-import React from 'react'
-import './content-card.style.scss'
+import React from 'react';
+import './content-card.style.scss';
+import '../../links-object.json';
 
-const ContentCard = () => {
+type CardProps = {
+  linkName: string,
+  title: string,
+  subtitle: string,
+  content: string,
+  imgSide: 'left'|'right',
+}
+
+const ContentCard = ({ linkName, title, subtitle, content, imgSide }: CardProps) => {
+  
+  
   return (
-    <div className='content-card'>
-    <div className="image">here is the image</div>
-    <h2 className='title'>ContentCard Title</h2>
-    <h3 className="subtitle">Sub title</h3>
-    <p className="content"></p>
+    <div className={`content-card ${imgSide}`}>
+      <img src={linkName} alt="irrigation reel tumbnail" />
+      <div className="content-sectrion">
+        <h2 className='title'>{title}</h2>
+        <h3 className="subtitle">{subtitle}</h3>
+        <p className="content">{content}</p>
+      </div>
     </div>
   )
 }

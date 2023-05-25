@@ -60,7 +60,6 @@ const Navigation = ({ items }: NavigationProps) => {
     }
 
     const addTransparencyToNavbar = () =>{
-        console.log(window.scrollY)
         if (window.scrollY >=60) { 
             setIsTransparentNavbar(true)
             } else {
