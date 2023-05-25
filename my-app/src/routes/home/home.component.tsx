@@ -12,6 +12,7 @@ import Button from '../../components/button/button.component';
 import HeaderHomePage from '../../components/header-home-page/header-home-page.component';
 import InfoSection from '../../components/info-section/info-section.component';
 import ContentCard from '../../components/content-card/content-card.component';
+import ContatForm from '../../components/contact-form/contact-form.component';
 
 
 
@@ -28,6 +29,7 @@ const Home = () => {
 
       <HeaderHomePage />
       <InfoSection /> 
+      <ContatForm />
       <Outlet />
     </div>
   )
