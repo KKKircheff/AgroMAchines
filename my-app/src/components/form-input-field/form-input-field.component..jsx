@@ -1,9 +1,9 @@
-import './form-single-input.styles.scss';
+import './form-input-field.styles.scss';
 import React from 'react';
 
-export default function FormInput({ label, ...otherProps }) {
+export default function FormInputField({ label, ...otherProps }) {
     return (
-        <div className ='group'>
+        <div className ='form-input-wrapper'>
             <input className="form-input"{...otherProps} />
             {label &&
                 <label

@@ -10,11 +10,15 @@
   background: linear-gradient(to bottom, #ffffff 0%, $background-color 100%);
 }
 
+.card-content-container {
+  background-color: $background-color;
+}
+
 @media (min-width: 620px) {
   .counter-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 0 15px;
+    padding: 50px 15px;
   }
 }
 
