@@ -1,12 +1,28 @@
-.contact-form-container{
+@import '../../assets/app.colors.scss';
+
+.contact-form-container {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    margin-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 60px auto;
   
-    h2{
+    h2 {
+      font-size: calc( 2rem + 1vw);
       margin: 10px 0px;
+      color: $color-primary-0;
     }
+
+    p{
+      margin: 5vw 0px;
+      color: $color-primary-1;
+      font-weight: 500;
+      font-size: .9rem;
+      text-align: justify;
+      max-width: 400px;
+    }
+
   }
   
 
