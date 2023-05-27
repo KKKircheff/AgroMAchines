@@ -13,6 +13,7 @@ import HeaderHomePage from '../../components/header-home-page/header-home-page.c
 import InfoSection from '../../components/info-section/info-section.component';
 import ContentCard from '../../components/content-card/content-card.component';
 import ContatForm from '../../components/contact-form/contact-form.component';
+import ProductCard from '../../components/product-card/product-card.component';
 
 
 
@@ -28,8 +29,16 @@ const Home = () => {
     <div className='home-wrapper'>
 
       <HeaderHomePage />
-      <InfoSection /> 
+      <InfoSection />
       <ContatForm />
+      <ProductCard
+        url='https://i.ibb.co/481qkwP/img-reel-2.jpg'
+        title='Rainbow'
+        subtitle='Rowatti'
+        content='Поливна макара Irrimec ф90, 360 м. - редуктор с турбина. Лафетен лагер. Помпа Rowatti 80 m3, 9 bar. Плюс комплект маркучи. Много запазена и поддържана. Готова за ползване. Внос Нидерландия. Пистолет Twin spruier '
+        imgSide='left'
+      />
+      <h1>Some text</h1>
       <Outlet />
     </div>
   )
