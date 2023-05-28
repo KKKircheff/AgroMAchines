@@ -4,6 +4,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { renderArrowNext, renderArrowPrev, renderIndicator } from '../../utils/custom_carousel_controls';
 import './product.card.style.scss';
+import { useEffect } from 'react';
+import {GiWaterRecycling} from 'react-icons/gi'
+import AOS from 'aos';
+
 
 type CardProps = {
   url: string,
@@ -15,67 +19,10 @@ type CardProps = {
 
 const ProductCard = ({ url, title, subtitle, content, imgSide }: CardProps) => {
 
-//   const arrowStyles: CSSProperties = {
-//     position: 'absolute',
-//     zIndex: 2,
-//     top: 'calc(50% - 15px)',
-//     width: 30,
-//     height: 30,
-//     cursor: 'pointer',
-// };
-
-// const indicatorStyles: CSSProperties = {
-//     background: '#fff',
-//     width: 8,
-//     height: 8,
-//     display: 'inline-block',
-//     margin: '0 8px',
-// };
-
-// const renderArrowPrev = (onClickHandler: () => void, hasPrev: boolean, label: string): React.ReactNode => {
-//   return hasPrev ? (
-//     <button type="button" onClick={onClickHandler} title={label} style={{ ...arrowStyles, left: 15 }}>
-//       <SlArrowLeft />
-//     </button>
-//   ) : null;
-// };
-// const renderArrowNext = (onClickHandler: () => void, hasNext: boolean, label: string): React.ReactNode => {
-//   return hasNext ? (
-//     <button type="button" onClick={onClickHandler} title={label} style={{ ...arrowStyles, left: 15 }}>
-//       <SlArrowRight />
-//     </button>
-//   ) : null;
-// };
-
-// const renderIndicator = (
-//   onClickHandler: (e: React.MouseEvent<Element, MouseEvent> | React.KeyboardEvent<Element>) => void,
-//   isSelected: boolean,
-//   index: number,
-//   label: string
-// ): React.ReactNode => {
-//   if (isSelected) {
-//     return (
-//       <li
-//         style={{ ...indicatorStyles, background: '#000' }}
-//         aria-label={`Selected: ${label} ${index + 1}`}
-//         title={`Selected: ${label} ${index + 1}`}
-//       />
-//     );
-//   }
-//   return (
-//     <li
-//       style={indicatorStyles}
-//       onClick={onClickHandler}
-//       onKeyDown={onClickHandler}
-//       value={index}
-//       key={index}
-//       role="button"
-//       tabIndex={0}
-//       title={`${label} ${index + 1}`}
-//       aria-label={`${label} ${index + 1}`}
-//     />
-//   );
-// };
+  useEffect(() => {
+    AOS.init({ duration: 900 });
+    AOS.refresh();
+  }, []);
 
    console.log(isMobile);
   return (
@@ -106,10 +53,12 @@ const ProductCard = ({ url, title, subtitle, content, imgSide }: CardProps) => {
         </Carousel>
       </div>
       <div className="content-section" data-aos="fade-down" >
+        <div className="top-banner-title-section" data-aos="fade-right"><span>избрана оферта</span></div>
+        <div className="top-banner-icon-section" data-aos="fade-left"><span><GiWaterRecycling /></span></div>
         <div className="title-group">
           <h2 className='title'>Макара за напояване</h2>
-          <h2 className='subtitle'>Mарка: {title}</h2>
-          <h3 className="subtitle">Помпа:  {subtitle}</h3>
+          <h2 className='subtitle'>Mарка: <span>{title}</span></h2>
+          <h3 className="subtitle">Помпа: <span>{subtitle}</span></h3>
         </div>
         <h4>Описане:</h4>
          <p className="content">{content}</p>
