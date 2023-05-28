@@ -1,18 +1,22 @@
 import './counter.style.scss';
-import React ,{useEffect} from 'react'
+import React, { useEffect } from 'react'
 import CountUp from 'react-countup';
 import AOS from 'aos';
 import RenderIfVisible from 'react-render-if-visible';
 
 type CounterProps = {
     countFrom: number,
-    countTo:number,
-    content:string
+    countTo: number,
+    content: string
 }
 
-    const Counter = ({countFrom, countTo, content}:CounterProps) => {
-            AOS.init({ duration: 800 });
-            AOS.refresh(); 
+const Counter = ({ countFrom, countTo, content }: CounterProps) => {
+
+    useEffect(() => {
+        AOS.init({ duration: 800 });
+        AOS.refresh();
+    }, [])
+
     return (
         <div className='info-card' data-aos="fade-in">
             <RenderIfVisible visibleOffset={1}>
@@ -28,7 +32,6 @@ type CounterProps = {
                 </div>
 
                 <div className='separator'></div>
-
             </RenderIfVisible >
             <div className='content-wrapper'>
                 <h2>{content}</h2>

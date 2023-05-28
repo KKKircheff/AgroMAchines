@@ -28,11 +28,9 @@ const Home = () => {
 
       <HeaderHomePage />
       <InfoSection />
-      <ContatForm />
-
-      { productsData 
-       && productsData.map((product, index)=><ProductCard
-          key={index}
+      { productsData.map((product, index)=>{
+      return <ProductCard
+          key={product.url[0]+index}
           url={product.url}
           mainTitle={product.mainTitle}
           title={product.title}
@@ -40,8 +38,8 @@ const Home = () => {
           content={product.content}
           price={product.price}
           imgSide='left'
-      />
-      )}
+      />})}
+      <ContatForm />
       <FooterHomePage />
       <Outlet />
     </div>

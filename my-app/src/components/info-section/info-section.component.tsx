@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import AOS from 'aos';
 import Counter from '../counter/counter.component';
 import ContentCard from '../content-card/content-card.component';
+import RenderIfVisible from 'react-render-if-visible';
 import { counetrsContent } from '../../application-data/counters-content';
 import { cardContent } from '../../application-data/content-card-data'
 
@@ -8,10 +10,15 @@ import './info-section.style.scss'
 
 
 const InfoSection = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800 });
+    AOS.refresh();
+  }, []);
+
     return (
 
         <div className='info-section-wrapper'>
-            
+
             <div className="counter-container">
                 {counetrsContent.map((counterItem, index) => {
                     return <Counter
@@ -29,7 +36,7 @@ const InfoSection = () => {
                         ? 'right'
                         : 'left';
                     return <ContentCard
-                        key={index}
+                        key={cardItem.url}
                         url={cardItem.url}
                         title={cardItem.title}
                         subtitle={cardItem.subtitle}
@@ -37,6 +44,9 @@ const InfoSection = () => {
                         imgSide={imgSide}
                     />
                 })}
+            </div>
+            <div className="logos-image-container" data-aos="fade-in">
+                <img src="https://i.ibb.co/kqpKwqY/Honey-Comb-Wire-Logos.png" alt="поливни макари марки" />
             </div>
         </div>
     )
