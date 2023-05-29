@@ -81,7 +81,7 @@ const Navigation = ({ items }: NavigationProps) => {
                     : 'main-navbar'}
             >
                 <div className="container">
-                    <div className={['menu-logo-section', isToggled && 'active', closeSubMenu && 'closed'].filter(Boolean).join(' ')} data-aos='fade-down'>
+                    <div className={['menu-logo-section', isToggled && 'active', closeSubMenu && 'closed'].filter(Boolean).join(' ')}>
                         <h1>agro</h1>
                         <h1>machines</h1>
                     </div>

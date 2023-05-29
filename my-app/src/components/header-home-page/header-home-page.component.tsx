@@ -12,7 +12,7 @@ const HeaderHomePage = () => {
         <h1>ПОЛИВНИ СИСТЕМИ </h1>
         <h1>ВТОРА УПОТРЕБА</h1>
         <h1>ОТ НИДЕРЛАНДИЯ</h1>
-        <Button id='header-button' buttonType={''}>Контакт</Button>
+        <Button id='header-button' buttonType={''} >Контакт</Button>
       </div>
       <div className="right-side"  data-aos="fade-left">
         <img src={headerImage} alt="поливна макара" />
