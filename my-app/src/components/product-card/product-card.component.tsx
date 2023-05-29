@@ -41,20 +41,20 @@ const ProductCard = ({ url, mainTitle, title, subtitle, content, price, imgSide 
                 />
         </div>
 
-        <div className="content-section">
+        <div className="content-section" data-aos="zoom-in">
           <div className="top-banner-title-section" data-aos="fade-right">
             <p>избрана оферта</p>
           </div>
           <div className="top-banner-icon-section" data-aos="fade-left">
             <p><GiWaterRecycling /></p>
           </div>
-          <div className="title-group" data-aos="zoom-in">
+          <div className="title-group">
             <h2 className='product-card-title'>{mainTitle}</h2>
             <h2 className='product-card-subtitle'>Mарка: <span>{title}</span></h2>
             <h2 className="product-card-subtitle">Помпа: <span>{subtitle}</span></h2>
           </div>
-          <h4 data-aos="zoom-in">Цена: <span>{price} лева</span></h4>
-          <p className="product-card-content" data-aos="zoom-in">{content}</p>
+          <h4>Цена: <span>{price} лева</span></h4>
+          <p className="product-card-content">{content}</p>
         </div>
 
       </div>

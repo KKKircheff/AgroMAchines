@@ -59,7 +59,7 @@
   color: white;
 }
 
-.logo {
+.phone-number-container {
   display: flex;
   align-items: center;
   color: white;
@@ -86,7 +86,6 @@
 
   &.translate-down {
     p {
-      font-size: calc(0.6rem + 0.8vw);
       transform: translateY(220px);
     }
   }
@@ -233,7 +232,7 @@ ul {
     flex-direction: row;
     justify-content: space-between;
 
-    .logo {
+    .phone-number-container {
       p {
         font-size: calc(0.5rem + 0.8vw);
         padding: 0 0 0 calc(1px + 20vw);

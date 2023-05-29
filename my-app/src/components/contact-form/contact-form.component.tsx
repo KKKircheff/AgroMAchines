@@ -90,6 +90,7 @@ export default function ContatForm() {
           label='Имена'
           type='text'
           name='name'
+          autoComplete='off'
           onChange={handleChange}
           value={formValues.name}
         />
@@ -98,6 +99,7 @@ export default function ContatForm() {
           label='Компния /опция/'
           type='text'
           name='company'
+          autoComplete='off'
           onChange={handleChange}
           value={formValues.company}
         />
@@ -106,6 +108,7 @@ export default function ContatForm() {
           label='Телефон за контакт'
           type='text'
           name='phoneNumber'
+          autoComplete='off'
           onChange={handleChange}
           value={formValues.phoneNumber}
         />
@@ -114,6 +117,7 @@ export default function ContatForm() {
           label='Email'
           type='email'
           name='email'
+          autoComplete='off'
           onChange={handleChange}
           value={formValues.email}
         />

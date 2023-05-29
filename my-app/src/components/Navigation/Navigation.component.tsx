@@ -84,7 +84,7 @@ const Navigation = ({ items }: NavigationProps) => {
                         <h1>agro</h1>
                         <h1>machines</h1>
                     </div>
-                    <div className={['logo', isToggled && 'translate-down', closeSubMenu && 'closed'].filter(Boolean).join(' ')}>
+                    <div className={['phone-number-container', isToggled && 'translate-down', closeSubMenu && 'closed'].filter(Boolean).join(' ')}>
                         <p><span><HiOutlinePhone /></span> +359 876 962484</p>
                     </div>
                     <div
