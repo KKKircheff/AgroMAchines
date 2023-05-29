@@ -2,9 +2,12 @@ import React from 'react';
 import { Item } from '../../App';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import './Navigation.style.scss'
+
 import { FaAngleDown, FaReact } from 'react-icons/fa'
 import { TbBrandTypescript } from 'react-icons/tb'
+import { HiOutlinePhone } from 'react-icons/hi';
+
+import './Navigation.style.scss'
 import { Outlet } from 'react-router-dom';
 interface NavigationProps {
     items: Item[];
@@ -59,12 +62,12 @@ const Navigation = ({ items }: NavigationProps) => {
         }
     }
 
-    const addTransparencyToNavbar = () =>{
-        if (window.scrollY >=60) { 
+    const addTransparencyToNavbar = () => {
+        if (window.scrollY >= 60) {
             setIsTransparentNavbar(true)
-            } else {
-                setIsTransparentNavbar(false)
-            }
+        } else {
+            setIsTransparentNavbar(false)
+        }
     }
 
     window.addEventListener('scroll', addTransparencyToNavbar)
@@ -74,17 +77,16 @@ const Navigation = ({ items }: NavigationProps) => {
             <div className='under-navigation-layer'></div>
             <nav className={
                 isTransparentNavbar
-                ?'main-navbar active'
-                :'main-navbar'}
-                >
+                    ? 'main-navbar active'
+                    : 'main-navbar'}
+            >
                 <div className="container">
                     <div className={['menu-logo-section', isToggled && 'active', closeSubMenu && 'closed'].filter(Boolean).join(' ')}>
                         <h1>agro</h1>
                         <h1>machines</h1>
                     </div>
-                    <div className="logo">
-                        {/* <FaReact /><span> + </span><TbBrandTypescript /> */}
-                        <span> </span>
+                    <div className={['logo', isToggled && 'translate-down', closeSubMenu && 'closed'].filter(Boolean).join(' ')}>
+                        <p><span><HiOutlinePhone /></span> +359 876 962484</p>
                     </div>
                     <div
                         className={

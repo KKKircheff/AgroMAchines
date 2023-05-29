@@ -64,8 +64,31 @@
   align-items: center;
   color: white;
   font-size: 1.5rem;
-  > * {
-    padding: 0 10px;
+  z-index: 10;
+  p {
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kanit', sans-serif;
+    font-size: calc(0.8rem + 0.8vw);
+    font-weight: 400;
+    font-style: italic;
+    padding: 0 0 0 calc(36vw);
+    margin: 0;
+    span {
+      margin-top: 4px;
+      font-size: 0.8rem;
+      line-height: 1rem;
+    }
+  }
+
+  &.translate-down {
+    p {
+      font-size: calc(0.6rem + 0.8vw);
+      transform: translateY(220px);
+    }
   }
 }
 
@@ -209,12 +232,26 @@ ul {
   .main-navbar {
     flex-direction: row;
     justify-content: space-between;
+
+    .logo {
+      p {
+        font-size: calc(0.5rem + 0.8vw);
+        padding: 0 0 0 calc(1px + 20vw);
+      }
+      &.translate-down {
+        p {
+           padding: 0 0 0 calc(1px + 20vw);
+          font-size: calc(0.5rem + 0.8vw);
+          transform: translateY(0px);
+        }
+      }
+    }
   }
 
   .menu-logo-section {
     height: 30px;
     padding-top: 15px;
-    padding-bottom:35px;
+    padding-bottom: 35px;
   }
 
   .hamburger {
@@ -232,7 +269,6 @@ ul {
     left: 0;
     background-color: rgba($color-primary-1, 0.3);
     clip-path: polygon(3.5% 0, 100% 0, 100% 100%, 0% 100%);
-
 
     li {
       font-size: calc(0.4rem + 0.7vw);
