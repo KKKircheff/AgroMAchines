@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.scss';
+import AOS from 'aos';
 import Home from './routes/home/home.component';
 import { Routes, Route } from 'react-router-dom';
 import Navigation from './components/navigation/Navigation.component';
@@ -20,6 +21,13 @@ const items: Item[] = [
   { name: 'контакт', url: '/contact' },
 ];
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 800 });
+    AOS.refresh();
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+  }, []);
 
   return (
     <div className="App">

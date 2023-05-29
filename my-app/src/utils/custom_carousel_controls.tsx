@@ -12,12 +12,8 @@ export const arrowStyles: CSSProperties = {
     top: 'calc(50% - 15px)',
     width: 30,
     height: 30,
-    cursor: 'pointer',
-    '&:hover': {
-      color: "red",
-      background:"red",
-    }
-} as any;
+    cursor: 'pointer', 
+};
 
 export const indicatorStyles: CSSProperties = {
     background: '#76B82A',
@@ -64,6 +60,7 @@ export const renderIndicator = (
   if (isSelected) {
     return (
       <li
+        key={index}
         style={{ ...indicatorStyles, background: '#B7E97D' }}
         aria-label={`Selected: ${label} ${index + 1}`}
         title={`Selected: ${label} ${index + 1}`}

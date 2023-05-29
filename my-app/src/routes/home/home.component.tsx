@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 
 import './home.style.scss'
 
-import AOS from 'aos';
 import "aos/dist/aos.css";
 import RenderIfVisible from 'react-render-if-visible';
 
@@ -18,27 +17,24 @@ import { productsData } from '../../application-data/products-data';
 
 const Home = () => {
 
-  useEffect(() => {
-    AOS.init({ duration: 800 });
-    AOS.refresh();
-  }, []);
+const productCards = productsData.map((product, index)=>{
+  return <ProductCard
+      key={product.url[0]+index}
+      url={product.url}
+      mainTitle={product.mainTitle}
+      title={product.title}
+      subtitle={product.subtitle}
+      content={product.content}
+      price={product.price}
+      imgSide='left'
+  />})
 
   return (
     <div className='home-wrapper'>
 
       <HeaderHomePage />
       <InfoSection />
-      { productsData.map((product, index)=>{
-      return <ProductCard
-          key={product.url[0]+index}
-          url={product.url}
-          mainTitle={product.mainTitle}
-          title={product.title}
-          subtitle={product.subtitle}
-          content={product.content}
-          price={product.price}
-          imgSide='left'
-      />})}
+      { productCards && <div>{productCards}</div>} 
       <ContatForm />
       <FooterHomePage />
       <Outlet />

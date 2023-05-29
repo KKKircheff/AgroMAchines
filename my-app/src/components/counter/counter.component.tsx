@@ -1,7 +1,6 @@
 import './counter.style.scss';
 import React, { useEffect } from 'react'
 import CountUp from 'react-countup';
-import AOS from 'aos';
 import RenderIfVisible from 'react-render-if-visible';
 
 type CounterProps = {
@@ -11,11 +10,6 @@ type CounterProps = {
 }
 
 const Counter = ({ countFrom, countTo, content }: CounterProps) => {
-
-    useEffect(() => {
-        AOS.init({ duration: 800 });
-        AOS.refresh();
-    }, [])
 
     return (
         <div className='info-card' data-aos="fade-in">

@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 import './header-home-page.style.scss'
 import Button from '../button/button.component'
 import headerImage from '../../images-application/header-image.jpg'
-import AOS from 'aos';
 
 const HeaderHomePage = () => {
 
