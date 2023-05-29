@@ -2,7 +2,6 @@ import React, {useEffect} from 'react'
 import AOS from 'aos';
 import Counter from '../counter/counter.component';
 import ContentCard from '../content-card/content-card.component';
-import RenderIfVisible from 'react-render-if-visible';
 import { counetrsContent } from '../../application-data/counters-content';
 import { cardContent } from '../../application-data/content-card-data'
 

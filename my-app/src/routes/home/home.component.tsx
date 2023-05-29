@@ -1,11 +1,7 @@
 import { Outlet } from 'react-router-dom';
-import { useEffect } from 'react';
 
 import './home.style.scss'
-
 import "aos/dist/aos.css";
-import RenderIfVisible from 'react-render-if-visible';
-
 import Button from '../../components/button/button.component';
 import HeaderHomePage from '../../components/header-home-page/header-home-page.component';
 import InfoSection from '../../components/info-section/info-section.component';

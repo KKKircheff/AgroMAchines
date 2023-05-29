@@ -3,8 +3,7 @@ import { Item } from '../../App';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-import { FaAngleDown, FaReact } from 'react-icons/fa'
-import { TbBrandTypescript } from 'react-icons/tb'
+import { FaAngleDown } from 'react-icons/fa'
 import { HiOutlinePhone } from 'react-icons/hi';
 
 import './Navigation.style.scss'

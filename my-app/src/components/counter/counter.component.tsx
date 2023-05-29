@@ -1,5 +1,5 @@
 import './counter.style.scss';
-import React, { useEffect } from 'react'
+import React from 'react'
 import CountUp from 'react-countup';
 import RenderIfVisible from 'react-render-if-visible';
 
@@ -13,7 +13,7 @@ const Counter = ({ countFrom, countTo, content }: CounterProps) => {
 
     return (
         <div className='info-card' data-aos="fade-in">
-            <RenderIfVisible visibleOffset={1}>
+            <RenderIfVisible defaultHeight={600} visibleOffset={50}>
                 <div className="counter-wrapper">
                     <CountUp
                         start={countFrom}
