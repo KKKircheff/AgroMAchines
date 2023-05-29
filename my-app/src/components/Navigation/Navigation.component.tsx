@@ -78,8 +78,13 @@ const Navigation = ({ items }: NavigationProps) => {
                 :'main-navbar'}
                 >
                 <div className="container">
+                    <div className={['menu-logo-section', isToggled && 'active', closeSubMenu && 'closed'].filter(Boolean).join(' ')}>
+                        <h1>agro</h1>
+                        <h1>machines</h1>
+                    </div>
                     <div className="logo">
-                        <FaReact /><span> + </span><TbBrandTypescript />
+                        {/* <FaReact /><span> + </span><TbBrandTypescript /> */}
+                        <span> </span>
                     </div>
                     <div
                         className={
