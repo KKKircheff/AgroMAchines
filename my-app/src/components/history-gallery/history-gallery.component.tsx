@@ -5,10 +5,10 @@ import PhotoAlbum from "react-photo-album";
 // import { getImageSize} from 'react-image-size';
 // import { galleryData } from '../application-data/gallery-data';
 
-import { fullGalleryData } from '../application-data/gallery-data';
+import { fullGalleryData } from '../../application-data/gallery-data';
 import './history-gallery.component.scss'
 import { ClickHandlerProps } from 'react-photo-album';
-import PopUpImage from '../components/pop-up-image/pop-up-image.component';
+import PopUpImage from '../pop-up-image/pop-up-image.component';
 
 type Photo = {
   src: string,

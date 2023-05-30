@@ -1,7 +1,7 @@
 export const counetrsContent = [
     {
       "countFrom": 0,
-      "countTo": 27,
+      "countTo": 33,
       "content": "увеличение на добива на продукция!",
       "countAddOn":"%",
     },

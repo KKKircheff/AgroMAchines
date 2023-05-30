@@ -9,7 +9,7 @@ import ContatForm from '../../components/contact-form/contact-form.component';
 import ProductCard from '../../components/product-card/product-card.component';
 import FooterHomePage from '../../components/footer-home-page/footer-home-page.component';
 import { productsData } from '../../application-data/products-data';
-const HistoryGallery = React.lazy(() => import('../../history-gallery/history-gallery.component'))
+const HistoryGallery = React.lazy(() => import('../../components/history-gallery/history-gallery.component'))
 const Home = () => {
 
 const productCards = productsData.map((product, index)=>{
