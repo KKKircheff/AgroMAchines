@@ -15,10 +15,10 @@ const ContentCard = ({ url, title, subtitle, content, imgSide }: CardProps) => {
   return (
     <div className={`content-card ${imgSide}`}  data-aos="fade-in">
       <img src={url} alt="irrigation reel tumbnail" />
-      <div className="content-sectrion" data-aos="fade-down" >
-        <h2 className='title'>{title}</h2>
-        <h3 className="subtitle">{subtitle}</h3>
-        <p className="content">{content}</p>
+      <div className="content-section"  >
+        <h2 className='title' data-aos={`fade-${imgSide}`}>{title}</h2>
+        <h3 className='subtitle' data-aos={`fade-${imgSide}`}>{subtitle}</h3>
+        <p className='content' data-aos={`fade-${imgSide}`}>{content}</p>
       </div>
     </div>
   )

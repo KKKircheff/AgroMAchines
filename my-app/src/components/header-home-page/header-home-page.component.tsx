@@ -1,18 +1,22 @@
 import React from 'react'
-import { useEffect } from 'react'
-import './header-home-page.style.scss'
 import Button from '../button/button.component'
 import headerImage from '../../images-application/header-image.jpg'
+import './header-home-page.style.scss'
 
 const HeaderHomePage = () => {
 
   return (
     <div className="header-home-page-wrapper">
-      <div className="left-side" data-aos="fade-right">
-        <h1>ПОЛИВНИ СИСТЕМИ </h1>
-        <h1>ВТОРА УПОТРЕБА</h1>
-        <h1>ОТ НИДЕРЛАНДИЯ</h1>
-        <Button id='header-button' buttonType={''} >Контакт</Button>
+      <div className="left-side" >
+        <h1 data-aos="fade-right">ПОЛИВНИ СИСТЕМИ </h1>
+        <h1 data-aos="fade-right" data-aos-delay="100">ВТОРА УПОТРЕБА</h1>
+        <h1 data-aos="fade-right" data-aos-delay="200">ОТ НИДЕРЛАНДИЯ</h1>
+        <Button id='header-button'
+                buttonType={''}
+                data-aos="fade-right"
+                data-aos-delay="200"
+                data-aos-anchor=".left-side"
+                >Контакт</Button>
       </div>
       <div className="right-side"  data-aos="fade-left">
         <img src={headerImage} alt="поливна макара" />

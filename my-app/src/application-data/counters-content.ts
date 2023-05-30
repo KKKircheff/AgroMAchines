@@ -1,18 +1,21 @@
 export const counetrsContent = [
     {
       "countFrom": 0,
-      "countTo": 33,
-      "content": "процента увеличение на добива на продукция!"
+      "countTo": 27,
+      "content": "увеличение на добива на продукция!",
+      "countAddOn":"%",
     },
     {
         "countFrom": 0,
-        "countTo": 767,
-        "content": "актуални оферти за точен и изгоден избор!"
+        "countTo": 450,
+        "content": "актуални оферти за точен и изгоден избор!",
+        "countAddOn":"+",
       },
       {
         "countFrom": 0,
-        "countTo": 57,
-        "content": "доставени машини на клиенти в България от нас!"
+        "countTo": 51,
+        "content": "доставени машини на клиенти в България от нас!",
+        "countAddOn":"+",
       }
   ]
 

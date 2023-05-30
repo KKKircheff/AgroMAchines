@@ -25,6 +25,7 @@ const InfoSection = () => {
                         countFrom={counterItem.countFrom}
                         countTo={counterItem.countTo}
                         content={counterItem.content}
+                        countAddOn={counterItem.countAddOn}
                     />
                 })}
             </div>
