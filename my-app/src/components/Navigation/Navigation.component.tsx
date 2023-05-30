@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Item } from '../../App';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import AOS from 'aos';
 import { FaAngleDown } from 'react-icons/fa'
 import { HiOutlinePhone } from 'react-icons/hi';
 
@@ -14,12 +13,7 @@ interface NavigationProps {
 }
 
 const Navigation = ({ items }: NavigationProps) => {
-    useEffect(() => {
-        AOS.init({ duration: 800 });
-        AOS.refresh();
-      }, []);
     
-
     const [isToggled, setIsToggled] = useState(false);
     const [closeSubMenu, setCloseSubMenu] = useState(false);
     const [isTransparentNavbar, setIsTransparentNavbar] = useState(false);
@@ -60,22 +54,46 @@ const Navigation = ({ items }: NavigationProps) => {
 
     const closeMenu = (closeSubMenu = false) => {
         setIsToggled(false);
-
         if (closeSubMenu && window.innerWidth > screenSizes.small) {
             setCloseSubMenu(true)
             setTimeout(() => setCloseSubMenu(false), 0)
         }
     }
 
-    const addTransparencyToNavbar = () => {
-        if (window.scrollY >= 60) {
-            setIsTransparentNavbar(true)
-        } else {
-            setIsTransparentNavbar(false)
+    useEffect(() => {
+        if (closeSubMenu && window.innerWidth > screenSizes.small) {
+            closeMenu(true);
         }
-    }
+        // eslint-disable-next-line
+    }, [closeSubMenu, screenSizes.small]);
 
-    window.addEventListener('scroll', addTransparencyToNavbar)
+    useEffect(() => {
+        const addTransparencyToNavbar = () => {
+            if (window.scrollY >= 60) {
+                setIsTransparentNavbar(true);
+            } else {
+                setIsTransparentNavbar(false);
+            }
+        };
+        window.addEventListener('scroll', addTransparencyToNavbar);
+        return () => {
+            window.removeEventListener('scroll', addTransparencyToNavbar);
+        };
+    }, []);
+
+
+
+
+
+    // const addTransparencyToNavbar = () => {
+    //     if (window.scrollY >= 60) {
+    //         setIsTransparentNavbar(true)
+    //     } else {
+    //         setIsTransparentNavbar(false)
+    //     }
+    // }
+
+    // window.addEventListener('scroll', addTransparencyToNavbar)
 
     return (
         <div className='main-wrapper'>

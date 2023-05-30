@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='/' element={<Navigation items={items} />}>
+         <Route path='/' element={<Navigation items={items} />}>
           <Route index element={<Home/>} />
         </Route>
       </Routes>
