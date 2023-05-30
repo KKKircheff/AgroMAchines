@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { FaAngleDown } from 'react-icons/fa'
 import { HiOutlinePhone } from 'react-icons/hi';
 
-import './Navigation.style.scss'
+import './navigation.style.scss'
 import { Outlet } from 'react-router-dom';
 interface NavigationProps {
     items: Item[];
