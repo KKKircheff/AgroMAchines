@@ -1,9 +1,10 @@
 import React, {useEffect} from 'react';
 import './App.scss';
 import AOS from 'aos';
+import Navigation from './components/navigation/navigation.component';
 import Home from './routes/home/home.component';
 import { Routes, Route } from 'react-router-dom';
-import Navigation from './components/navigation/navigation.component';
+
 
 export interface Item {
   name: string;
