@@ -6,14 +6,15 @@ import RenderIfVisible from 'react-render-if-visible';
 type CounterProps = {
     countFrom: number,
     countTo: number,
-    content: string
+    content: string,
+    countAddOn:string,
 }
 
-const Counter = ({ countFrom, countTo, content }: CounterProps) => {
+const Counter = ({ countFrom, countTo, content,countAddOn }: CounterProps) => {
 
     return (
         <div className='info-card' data-aos="fade-in">
-            <RenderIfVisible defaultHeight={600} visibleOffset={50}>
+            <RenderIfVisible defaultHeight={300} visibleOffset={50}>
                 <div className="counter-wrapper">
                     <CountUp
                         start={countFrom}
@@ -22,7 +23,7 @@ const Counter = ({ countFrom, countTo, content }: CounterProps) => {
                         redraw={true}
                         className='count-up'
                     />
-                    <span>+</span>
+                    <span>{countAddOn}</span>
                 </div>
 
                 <div className='separator'></div>

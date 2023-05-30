@@ -1,5 +1,4 @@
-import React, {useEffect} from 'react'
-import AOS from 'aos';
+import React from 'react'
 import Counter from '../counter/counter.component';
 import ContentCard from '../content-card/content-card.component';
 import { counetrsContent } from '../../application-data/counters-content';
@@ -9,11 +8,7 @@ import './info-section.style.scss'
 
 
 const InfoSection = () => {
-  useEffect(() => {
-    AOS.init({ duration: 800 });
-    AOS.refresh();
-  }, []);
-
+  
     return (
 
         <div className='info-section-wrapper'>
@@ -25,6 +20,7 @@ const InfoSection = () => {
                         countFrom={counterItem.countFrom}
                         countTo={counterItem.countTo}
                         content={counterItem.content}
+                        countAddOn={counterItem.countAddOn}
                     />
                 })}
             </div>

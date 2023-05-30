@@ -17,6 +17,8 @@
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
+    "react-image-size": "^2.0.2",
+    "react-photo-album": "^2.2.2",
     "react-render-if-visible": "^2.1.1",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.11.1",

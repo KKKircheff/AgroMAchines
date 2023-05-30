@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Item } from '../../App';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-
+import AOS from 'aos';
 import { FaAngleDown } from 'react-icons/fa'
 import { HiOutlinePhone } from 'react-icons/hi';
 
-import './Navigation.style.scss'
+import './navigation.style.scss'
 import { Outlet } from 'react-router-dom';
 interface NavigationProps {
     items: Item[];
 }
 
 const Navigation = ({ items }: NavigationProps) => {
+    useEffect(() => {
+        AOS.init({ duration: 800 });
+        AOS.refresh();
+      }, []);
+    
 
     const [isToggled, setIsToggled] = useState(false);
     const [closeSubMenu, setCloseSubMenu] = useState(false);

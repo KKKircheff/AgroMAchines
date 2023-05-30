@@ -58,7 +58,7 @@
         font-size: calc(0.5rem + 6vw);
         line-height: 7vw;
         padding-left: 45%;
-        color: $color-primary-1;
+        color: $color-primary-0;
         color: white;
         font-weight: 300;
       }
@@ -76,7 +76,9 @@
         font-size: 0.8rem;
         color: $color-secondary-1-0;
         span {
-          color: $color-primary-1;
+          font-size: .9rem;
+          margin-left:5px;
+          color: $color-primary-0;
         }
       }
     }
@@ -87,7 +89,8 @@
       line-height: 0.5rem;
       color: $color-secondary-1-0;
       span {
-        color:$color-primary-1;
+        font-size: .85rem;
+        color:$color-primary-0;
         margin-left:5px;
       }
     }
