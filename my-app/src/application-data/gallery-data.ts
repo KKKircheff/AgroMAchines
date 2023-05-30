@@ -1,226 +1,197 @@
 export const galleryData = [
+  'https://i.ibb.co/0f96p5S/28870237-1628309693962274-6209076168841198728-n.jpg',
+'https://i.ibb.co/X7S0GTD/28795699-1628309933962250-6193676910479566613-n.jpg',
+'https://i.ibb.co/GcQjrWL/28660760-1628310133962230-8781998536549274212-n.jpg',
+'https://i.ibb.co/1sdPLvn/28576970-1628309760628934-5020700472972452602-n.jpg',
+'https://i.ibb.co/tLVXsJK/28472209-1628309820628928-6803639975319997378-n.jpg',
+'https://i.ibb.co/yF8fPrM/25734060-1552610544865523-5792750323517242425-o.jpg',
+'https://i.ibb.co/Y71hR44/25626249-1552610358198875-1690978368168465493-o.jpg',
+'https://i.ibb.co/TLysDW1/20424035-1362865703840009-1258702010983198858-o.jpg',
+'https://i.ibb.co/5sT3sK4/20369761-1362865427173370-573672672541890337-o.jpg',
+'https://i.ibb.co/RCNPwXd/20287027-1362865547173358-2330634465971139442-o.jpg',
+'https://i.ibb.co/C1btykb/19667490-1325375810922332-3743526455436579089-o.jpg',
+'https://i.ibb.co/NyYGjys/19621226-1325376000922313-8863698924016913818-o.jpg',
+'https://i.ibb.co/mqR3t5g/19243202-1325375880922325-4359422605190513061-o.jpg',
+'https://i.ibb.co/nCJPj9r/19243047-1325376344255612-236659510046015320-o.jpg',
+'https://i.ibb.co/R9WHHHR/19055270-1297589647034282-6701036242313670145-o.jpg',
+'https://i.ibb.co/Sxw0Lc1/19023463-1297589750367605-29798055688817439-o.jpg',
+'https://i.ibb.co/M5615Z6/18954638-1297589483700965-5041707735469476848-o.jpg',
+'https://i.ibb.co/cwwNwt9/18953384-1297589683700945-3779876400890938656-o.jpg',
+'https://i.ibb.co/n6c8wJH/18922807-1297589547034292-2398853687324113556-o.jpg',
+'https://i.ibb.co/9sFnSfg/18921205-1297589967034250-6461806924119758215-o.jpg',
+'https://i.ibb.co/wBt8FWQ/18738602-1277437402382840-7224538608549991434-o.jpg',
+'https://i.ibb.co/VQ4Fg8v/18673163-1277437259049521-1332622349595493547-o.jpg',
+'https://i.ibb.co/XjtSJJg/18673033-1277437372382843-574964239379729372-o.jpg',
+'https://i.ibb.co/XFFbpcm/18671791-1271128379680409-5061524241559009084-o.jpg',
+'https://i.ibb.co/w4cp9Lj/18671557-1271126516347262-4866552508247071981-o.jpg',
+'https://i.ibb.co/YjhHGJ8/18623246-1271130409680206-984321774344496366-o.jpg',
+'https://i.ibb.co/qCGs85q/18620809-1277437349049512-8251345526601894400-o.jpg',
+'https://i.ibb.co/XJRQxbT/18620605-1271130853013495-269148005941457558-o.jpg',
+'https://i.ibb.co/K2tPgNX/18620168-1271116259681621-2539969235410988130-n.jpg',
+'https://i.ibb.co/vhNFqbh/18595649-1271127819680465-9048696734946062993-o.jpg',
+'https://i.ibb.co/HFtF2C2/18589039-1271131536346760-6550208347481282138-o.jpg',
+'https://i.ibb.co/g3n3rKq/18582287-1271127103013870-6989914104301807739-n.jpg'
+]
+
+export const fullGalleryData = [
   {
-    'url': 'https://ibb.co/jHcm4dd',
-    'description': '',
+    "src": "https://i.ibb.co/0f96p5S/28870237-1628309693962274-6209076168841198728-n.jpg",
+    "width": 540,
+    "height": 960
   },
   {
-    'url': 'https://ibb.co/7Jn5YX9',
-    'description': '',
+    "src": "https://i.ibb.co/X7S0GTD/28795699-1628309933962250-6193676910479566613-n.jpg",
+    "width": 960,
+    "height": 540
   },
   {
-    'url': 'https://ibb.co/S7cBs2M',
-    'description': '',
+    "src": "https://i.ibb.co/GcQjrWL/28660760-1628310133962230-8781998536549274212-n.jpg",
+    "width": 960,
+    "height": 540
   },
   {
-    'url': 'https://ibb.co/PgwY94n',
-    'description': '',
+    "src": "https://i.ibb.co/1sdPLvn/28576970-1628309760628934-5020700472972452602-n.jpg",
+    "width": 540,
+    "height": 960
   },
   {
-    'url': 'https://ibb.co/bRD8PHn',
-    'description': '',
+    "src": "https://i.ibb.co/tLVXsJK/28472209-1628309820628928-6803639975319997378-n.jpg",
+    "width": 960,
+    "height": 540
   },
   {
-    'url': 'https://ibb.co/fGqcTvv',
-    'description': '',
+    "src": "https://i.ibb.co/yF8fPrM/25734060-1552610544865523-5792750323517242425-o.jpg",
+    "width": 1152,
+    "height": 2048
   },
   {
-    'url': 'https://ibb.co/pL6hpT4',
-    'description': '',
+    "src": "https://i.ibb.co/Y71hR44/25626249-1552610358198875-1690978368168465493-o.jpg",
+    "width": 2048,
+    "height": 1152
   },
   {
-    'url': 'https://ibb.co/m8XqP8B',
-    'description': '',
+    "src": "https://i.ibb.co/TLysDW1/20424035-1362865703840009-1258702010983198858-o.jpg",
+    "width": 2048,
+    "height": 1152
   },
   {
-    'url': 'https://ibb.co/18CSZKZ',
-    'description': '',
+    "src": "https://i.ibb.co/5sT3sK4/20369761-1362865427173370-573672672541890337-o.jpg",
+    "width": 2048,
+    "height": 1152
   },
   {
-    'url': 'https://ibb.co/JmHGGjw',
-    'description': '',
+    "src": "https://i.ibb.co/RCNPwXd/20287027-1362865547173358-2330634465971139442-o.jpg",
+    "width": 2048,
+    "height": 1152
   },
   {
-    'url': 'https://ibb.co/mbCZz26',
-    'description': '',
+    "src": "https://i.ibb.co/C1btykb/19667490-1325375810922332-3743526455436579089-o.jpg",
+    "width": 2048,
+    "height": 1152
   },
   {
-    'url': 'https://ibb.co/84GLTrn',
-    'description': '',
+    "src": "https://i.ibb.co/NyYGjys/19621226-1325376000922313-8863698924016913818-o.jpg",
+    "width": 2048,
+    "height": 1152
   },
   {
-    'url': 'https://ibb.co/jv0fW8m',
-    'description': '',
+    "src": "https://i.ibb.co/mqR3t5g/19243202-1325375880922325-4359422605190513061-o.jpg",
+    "width": 1152,
+    "height": 2048
   },
   {
-    'url': 'https://ibb.co/dbmpFxX',
-    'description': '',
+    "src": "https://i.ibb.co/nCJPj9r/19243047-1325376344255612-236659510046015320-o.jpg",
+    "width": 2048,
+    "height": 1152
   },
   {
-    'url': 'https://ibb.co/6wSwB0n',
-    'description': '',
+    "src": "https://i.ibb.co/R9WHHHR/19055270-1297589647034282-6701036242313670145-o.jpg",
+    "width": 1152,
+    "height": 2048
   },
   {
-    'url': 'https://ibb.co/RTVcSvT',
-    'description': '',
+    "src": "https://i.ibb.co/Sxw0Lc1/19023463-1297589750367605-29798055688817439-o.jpg",
+    "width": 2048,
+    "height": 1152
   },
   {
-    'url': 'https://ibb.co/ZLNW6mv',
-    'description': '',
+    "src": "https://i.ibb.co/M5615Z6/18954638-1297589483700965-5041707735469476848-o.jpg",
+    "width": 1152,
+    "height": 2048
   },
   {
-    'url': 'https://ibb.co/pRc7P0B',
-    'description': '',
+    "src": "https://i.ibb.co/cwwNwt9/18953384-1297589683700945-3779876400890938656-o.jpg",
+    "width": 1152,
+    "height": 2048
   },
   {
-    'url': 'https://ibb.co/82GGkb2',
-    'description': '',
+    "src": "https://i.ibb.co/n6c8wJH/18922807-1297589547034292-2398853687324113556-o.jpg",
+    "width": 1152,
+    "height": 2048
   },
   {
-    'url': 'https://ibb.co/r0fFvTz',
-    'description': '',
+    "src": "https://i.ibb.co/9sFnSfg/18921205-1297589967034250-6461806924119758215-o.jpg",
+    "width": 2048,
+    "height": 1152
   },
   {
-    'url': 'https://ibb.co/3TVB4L2',
-    'description': '',
+    "src": "https://i.ibb.co/wBt8FWQ/18738602-1277437402382840-7224538608549991434-o.jpg",
+    "width": 2048,
+    "height": 1152
   },
   {
-    'url': 'https://ibb.co/z6ShKVh',
-    'description': '',
+    "src": "https://i.ibb.co/VQ4Fg8v/18673163-1277437259049521-1332622349595493547-o.jpg",
+    "width": 2048,
+    "height": 1152
   },
   {
-    'url': 'https://ibb.co/G0h0dSY',
-    'description': '',
+    "src": "https://i.ibb.co/XjtSJJg/18673033-1277437372382843-574964239379729372-o.jpg",
+    "width": 2048,
+    "height": 1152
   },
   {
-    'url': 'https://ibb.co/p0f0PQP',
-    'description': '',
+    "src": "https://i.ibb.co/XFFbpcm/18671791-1271128379680409-5061524241559009084-o.jpg",
+    "width": 1280,
+    "height": 960
   },
   {
-    'url': 'https://ibb.co/QkWgQZk',
-    'description': '',
+    "src": "https://i.ibb.co/w4cp9Lj/18671557-1271126516347262-4866552508247071981-o.jpg",
+    "width": 1224,
+    "height": 689
   },
   {
-    'url': 'https://ibb.co/ByhpJ4t',
-    'description': '',
+    "src": "https://i.ibb.co/YjhHGJ8/18623246-1271130409680206-984321774344496366-o.jpg",
+    "width": 1280,
+    "height": 960
   },
   {
-    'url': 'https://ibb.co/mzWj5G7',
-    'description': '',
+    "src": "https://i.ibb.co/qCGs85q/18620809-1277437349049512-8251345526601894400-o.jpg",
+    "width": 2048,
+    "height": 1152
   },
   {
-    'url': 'https://ibb.co/8b35wcv',
-    'description': '',
+    "src": "https://i.ibb.co/XJRQxbT/18620605-1271130853013495-269148005941457558-o.jpg",
+    "width": 1017,
+    "height": 762
   },
   {
-    'url': 'https://ibb.co/5cLbVCv',
-    'description': '',
+    "src": "https://i.ibb.co/K2tPgNX/18620168-1271116259681621-2539969235410988130-n.jpg",
+    "width": 540,
+    "height": 540
   },
   {
-    'url': 'https://ibb.co/sqWs0Pz',
-    'description': '',
+    "src": "https://i.ibb.co/vhNFqbh/18595649-1271127819680465-9048696734946062993-o.jpg",
+    "width": 1224,
+    "height": 689
   },
   {
-    'url': 'https://ibb.co/frr2tjm',
-    'description': '',
+    "src": "https://i.ibb.co/HFtF2C2/18589039-1271131536346760-6550208347481282138-o.jpg",
+    "width": 1024,
+    "height": 768
   },
   {
-    'url': 'https://ibb.co/hLVD88j',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/yYjz6J8',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/0m51RM9',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/wM9yjbg',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/Jm7FcJf',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/RNNCNPK',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/k61D651',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/mB5tx0Y',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/f27000j',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/xHTF6Wh',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/J7c92jg',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/YLjVkL3',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/X274Ph7',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/jLzGXCs',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/c2J92Y3',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/6BQkcX8',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/27Cdn00',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/5h5M4Pz',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/y4HSyQP',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/Gst80xJ',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/2g3BpvQ',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/bszwGnF',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/P5WPskn',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/jv0fW8m',
-    'description': '',
-  },
-  {
-    'url': 'https://ibb.co/ByhpJ4t',
-    'description': '',
-  },
-];
+    "src": "https://i.ibb.co/g3n3rKq/18582287-1271127103013870-6989914104301807739-n.jpg",
+    "width": 726,
+    "height": 545
+  }
+]
