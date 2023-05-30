@@ -6,7 +6,8 @@ import AOS from 'aos';
 import { FaAngleDown } from 'react-icons/fa'
 import { HiOutlinePhone } from 'react-icons/hi';
 
-import './navigation.style.scss'
+import './navigation.styles.scss';
+
 import { Outlet } from 'react-router-dom';
 interface NavigationProps {
     items: Item[];
