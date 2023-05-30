@@ -87,6 +87,8 @@
   &.translate-down {
     p {
       transform: translateY(220px);
+      padding: 0;
+      margin: 0 0 0 calc(36vw);
     }
   }
 }

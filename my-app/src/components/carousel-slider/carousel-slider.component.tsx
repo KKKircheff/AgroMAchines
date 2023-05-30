@@ -36,6 +36,8 @@ const CarouselSlider = ({url,isClicked,setIsClicked,setPopUpUrl}:SliderProps) =>
             renderArrowPrev={renderArrowPrev}
             renderArrowNext={renderArrowNext}
             renderIndicator={renderIndicator}
+            axis={'horizontal'}
+            infiniteLoop={true}
             emulateTouch={true}
             showThumbs={false}
             swipeable={true}

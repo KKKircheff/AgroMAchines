@@ -6,7 +6,7 @@ import './header-home-page.style.scss'
 const HeaderHomePage = () => {
 
   return (
-    <div className="header-home-page-wrapper">
+    <div id='header-home-page-wrapper' className="header-home-page-wrapper">
       <div className="left-side" >
         <h1 data-aos="fade-right">ПОЛИВНИ СИСТЕМИ </h1>
         <h1 data-aos="fade-right" data-aos-delay="100">ВТОРА УПОТРЕБА</h1>

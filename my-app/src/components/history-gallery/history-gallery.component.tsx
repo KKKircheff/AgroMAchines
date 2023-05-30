@@ -54,7 +54,7 @@ const HistoryGallery = () => {
   //  console.log(photos);
 
   return (
-    <div className="history-gallery-wrapper">
+    <div id='history-gallery-wrapper' className="history-gallery-wrapper">
 
       {isClicked &&
        <PopUpImage

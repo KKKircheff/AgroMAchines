@@ -78,11 +78,10 @@ export default function ContatForm() {
       return
     }
     clearFormFields();
-
   }
 
   return (
-    <div className="contact-form-container" data-aos="fade-int">
+    <div id='contact-form-container' className="contact-form-container" data-aos="fade-int">
       <h2>Контакт с нас</h2>
       <p>ако имате въпрос относно някой от нашите продукти или имате нужда от съдействие в Нидерландия за закупуване на земеделска техника</p>
       <form onSubmit={handleSubmit}>
