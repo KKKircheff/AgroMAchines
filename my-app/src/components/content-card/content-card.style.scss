@@ -66,18 +66,22 @@
     .content-section {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      margin-top: auto;
+      justify-content: space-between;
+      // margin-top: auto;
       width: 50%;
       padding: 10px 40px 5px 40px;
 
+      .title-section-container{
+        padding-top: 5px;
+      }
+
       .title {
-        margin: 0 0 2vw 0;
+        margin: 0 0 0 0;
         font-size: 2rem;
       }
       
       .subtitle {
-        margin: 0 0 2vw 0;
+        margin: 0 0 0 0;
         font-size: 1.5rem;
       }
 
