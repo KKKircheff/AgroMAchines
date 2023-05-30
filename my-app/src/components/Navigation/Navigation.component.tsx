@@ -55,8 +55,8 @@ const Navigation = ({ items }: NavigationProps) => {
     const closeMenu = (closeSubMenu = false) => {
         setIsToggled(false);
         if (closeSubMenu && window.innerWidth > screenSizes.small) {
-            setCloseSubMenu(true)
-            setTimeout(() => setCloseSubMenu(false), 0)
+             setCloseSubMenu(true)
+             setTimeout(() => setCloseSubMenu(false), 0)
         }
     }
 
