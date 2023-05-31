@@ -14,22 +14,22 @@ const PopUpImage = ({ url, isClicked, setIsClicked }: PopUpProps) => {
 
   const viewport = document.querySelector('meta[name="viewport"]')!;
   console.log('first:',viewport);
-  viewport.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=4');
+  viewport.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=2');
   console.log('second:',viewport);
 
-  const {toggleView, setToggleView} = useToggleContext() || {};
+  const { setToggleView} = useToggleContext() || {};
   
   useEffect(() => {
     console.log('inside effect');
     console.log(viewport);
-  }, [isClicked]);
+  }, []);
 
 
   const handelClick = (() => {
     viewport.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1');
     console.log('set',viewport);
     bodyScroll.enable();
-    setToggleView!(!toggleView);
+    setToggleView!(prev=>!prev);
     setIsClicked(false);
     // setViewPortSize({...viewPortSize,
     //   content: 'width=device-width, initial-scale=1, maximum-scale=1'

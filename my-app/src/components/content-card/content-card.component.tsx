@@ -1,6 +1,5 @@
 import React from 'react';
 import './content-card.style.scss';
-import  {useToggleContext} from '../../App';
 
 type CardProps = {
   url: string,
@@ -11,7 +10,6 @@ type CardProps = {
 }
 
 const ContentCard = ({ url, title, subtitle, content, imgSide }: CardProps) => {
-  const {toggleView, setToggleView} = useToggleContext() || {};
   
   return (
     <div className={`content-card ${imgSide}`}  data-aos="fade-in">
