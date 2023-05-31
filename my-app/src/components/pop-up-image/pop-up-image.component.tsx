@@ -8,13 +8,15 @@ type PopUpProps = {
   setIsClicked: (newValue: boolean) => void;
 };
 
+document.querySelector('meta[name="viewport"]')!.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=2');
 const PopUpImage = ({ url, isClicked, setIsClicked }: PopUpProps) => {
     
-  
+
 
   const handelClick=(()=>{
     setIsClicked(false);
     bodyScroll.enable();
+    document.querySelector('meta[name="viewport"]')!.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1');
     console.log(window.visualViewport);    
     })
   
