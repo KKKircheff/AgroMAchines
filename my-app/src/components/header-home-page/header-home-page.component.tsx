@@ -16,7 +16,6 @@ const HeaderHomePage = () => {
 
           <Button id='header-button'
             buttonType={''}
-            linkTo={'contact-form-container'}
             data-aos="fade-right"
             data-aos-delay="200"
             data-aos-anchor=".left-side"

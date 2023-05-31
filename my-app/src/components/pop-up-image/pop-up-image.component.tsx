@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './pop-up-image.styles.scss';
 const bodyScroll = require('body-scroll-toggle');
 
@@ -8,18 +8,22 @@ type PopUpProps = {
   setIsClicked: (newValue: boolean) => void;
 };
 
-document.querySelector('meta[name="viewport"]')!.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=2');
 const PopUpImage = ({ url, isClicked, setIsClicked }: PopUpProps) => {
-    
+  const [viewPortSize, setViewPortSize] = useState('width=device-width, initial-scale=1, maximum-scale=2');
+  const viewport = document.querySelector('meta[name="viewport"]')!;
 
+  useEffect(() => {
+    viewport.setAttribute('content', viewPortSize);
+  }, [viewPortSize]);
 
-  const handelClick=(()=>{
+  console.log('inside:', viewport);
+
+  const handelClick = (() => {
     setIsClicked(false);
     bodyScroll.enable();
-    document.querySelector('meta[name="viewport"]')!.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1');
-    console.log(window.visualViewport);    
-    })
-  
+    setViewPortSize('width=device-width, initial-scale=1, maximum-scale=1');
+  })
+
   return (
     <div
       onClick={handelClick}
