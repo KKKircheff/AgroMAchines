@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState} from 'react';
+import { useToggleContext, useToggleContextUpdate } from '../../context/viewport-context'
 import './pop-up-image.styles.scss';
 const bodyScroll = require('body-scroll-toggle');
 
@@ -7,31 +8,27 @@ type PopUpProps = {
   isClicked: boolean;
   setIsClicked: (newValue: boolean) => void;
 };
-const viewport = document.querySelector('meta[name="viewport"]')!;
-console.log('first:',viewport);
 
 const PopUpImage = ({ url, isClicked, setIsClicked }: PopUpProps) => {
+
+  const viewPortToggle = useToggleContext();
+  const toggleViewPortValue = useToggleContextUpdate();
   
-  const [viewPortSize, setViewPortSize] = useState({
-    content: 'width=device-width, initial-scale=1, maximum-scale=2'
-  });
+  const viewport = document.querySelector('meta[name="viewport"]')!;
+  console.log('first:',viewport);
+  viewport.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=2');
+  console.log('after first set:',viewport);
 
-
-  useEffect(() => {
-    console.log('inside effect');
-    viewport.setAttribute('content', viewPortSize.content);
-    console.log(viewport);
-  }, []);
-
+useEffect(()=>{
+  console.log('rerender')
+},[viewPortToggle])
 
   const handelClick = (() => {
     viewport.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1');
-    console.log('set',viewport);
+    console.log('After click',viewport);
     setIsClicked(false);
     bodyScroll.enable();
-    // setViewPortSize({...viewPortSize,
-    //   content: 'width=device-width, initial-scale=1, maximum-scale=1'
-    // });
+    toggleViewPortValue!();
   })
 
   return (
