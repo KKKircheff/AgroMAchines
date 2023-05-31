@@ -54,7 +54,7 @@ const ProductCard = ({ url, mainTitle, title, subtitle, content, price, imgSide 
             <h2 className="product-card-subtitle">Помпа: <span>{subtitle}</span></h2>
           </div>
           <h4 data-aos="zoom-in">Цена: <span>{price} лева</span></h4>
-          <p className="product-card-content" data-aos="zoom-in">{content}</p>
+          <p className="product-card-content" data-aos="zoom-in"  data-aos-offset="50">{content}</p>
         </div>
 
       </div>

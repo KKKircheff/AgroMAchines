@@ -21,11 +21,17 @@ type Photo = {
 }
 
 const HistoryGallery = () => {
+
  // eslint-disable-next-line
   const [photos, setPhotos] = useState<Photo[]>(fullGalleryData);
   const [isClicked, setIsClicked] = useState(false);
   const [clickedUrl, setClickedUrl] = useState('');
 
+  const imageHeigth = (window.innerWidth<720) 
+                      ? 300
+                      : 150
+
+  
   const handleClick = (e: ClickHandlerProps<Photo>) => {
     setClickedUrl(e.photo.src);
     setIsClicked(true);
@@ -72,6 +78,7 @@ const HistoryGallery = () => {
         {photos.length
           ? <PhotoAlbum
             layout="rows"
+            targetRowHeight={imageHeigth}
             photos={photos}
             spacing={10}
             onClick={(e) => handleClick(e)}
