@@ -14,7 +14,7 @@ const PopUpImage = ({ url, isClicked, setIsClicked }: PopUpProps) => {
 
   const viewport = document.querySelector('meta[name="viewport"]')!;
   console.log('first:',viewport);
-  viewport.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=2');
+  viewport.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=4');
   console.log('second:',viewport);
 
   const {toggleView, setToggleView} = useToggleContext() || {};
