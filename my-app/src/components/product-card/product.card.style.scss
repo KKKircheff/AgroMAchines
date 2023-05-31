@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   padding: 0;
-  width: 80vw;
-  margin: 9vw;
+  width: 90vw;
+  margin: 4vw;
   border-radius: 8px;
   box-shadow: 0px 0px 23px 9px rgba(0, 0, 0, 0.13);
 
@@ -13,7 +13,7 @@
     width: 100%;
     border-radius: 5px 5px 0 0;
     img {
-      height:100vw;
+      height: 100vw;
       object-fit: cover;
     }
   }
@@ -53,7 +53,7 @@
       background-color: $color-primary-0;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 28% 100%);
       p {
-        margin-top: calc(.25rem + .7vw);
+        margin-top: calc(0.25rem + 0.7vw);
         font-size: calc(0.5rem + 6vw);
         line-height: 7vw;
         padding-left: 45%;
@@ -75,8 +75,8 @@
         font-size: calc(0.8rem + 1vw);
         color: $color-secondary-1-0;
         span {
-        font-size: calc(0.9rem + 1vw);
-          margin-left:5px;
+          font-size: calc(0.9rem + 1vw);
+          margin-left: 5px;
           color: $color-primary-0;
         }
       }
@@ -89,8 +89,8 @@
       color: $color-secondary-1-0;
       span {
         font-size: calc(0.85rem + 1vw);
-        color:$color-primary-0;
-        margin-left:5px;
+        color: $color-primary-0;
+        margin-left: 5px;
       }
     }
     .product-card-content {
@@ -106,8 +106,6 @@
 }
 
 @media (min-width: 720px) {
-
-  
   .product-card {
     display: flex;
     flex-direction: row;
@@ -118,7 +116,6 @@
     user-select: none;
     transition: all 0.05s;
     margin-top: 5vw;
-
 
     .carousel-wrapper {
       width: 33vw;
@@ -155,7 +152,6 @@
           font-size: calc(1.5rem + 2vw);
           line-height: 3vw;
           padding-left: 44%;
-          
         }
       }
 
@@ -180,38 +176,13 @@
       }
     }
   }
-  
-  .product-card:hover {
-    margin-top: 4.2vw;    
-    .content-section {
-      .top-banner-title-section {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 4% 100%);
-        transition: all 0.2s;
-        scale: 105%;
-        p{
-          padding-left: 12%;
-          transition: all 0.2s;
-          font-size: calc(0.2rem + 1.5vw);
 
-        }
-      }
-      .top-banner-icon-section {
-        scale: 105%;
-        height:6vw;
-        width: 20%;
-        left: 80%;
-        transition: all 0.2s;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 24% 100%);
-        p {
-          transition: all 0.2s;
-          line-height: 3vw;
-          font-size: calc(1rem + 2vw);
-          padding-left: 38%;
-          margin-top: .5rem;
-        }
-      }
+    .product-card:hover {
+      transform: scale(103%);
+      transition: transform 0.3s;
+
     }
-  }
+
   .button-arrow-carousel {
     display: block;
   }

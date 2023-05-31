@@ -23,7 +23,9 @@ export type ToggleContextType = {
       const [toggleView, setToggleView] = useState(false);
       
       useEffect(() => {
-        AOS.init({ duration: 800 });
+        AOS.init({ duration: 800,
+                    offset: 50, 
+                  });
         AOS.refresh();
         window.onbeforeunload = function () {
           window.scrollTo(0, 0);
