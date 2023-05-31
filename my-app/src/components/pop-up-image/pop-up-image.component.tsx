@@ -7,21 +7,31 @@ type PopUpProps = {
   isClicked: boolean;
   setIsClicked: (newValue: boolean) => void;
 };
+const viewport = document.querySelector('meta[name="viewport"]')!;
+console.log('first:',viewport);
 
 const PopUpImage = ({ url, isClicked, setIsClicked }: PopUpProps) => {
-  const [viewPortSize, setViewPortSize] = useState('width=device-width, initial-scale=1, maximum-scale=2');
-  const viewport = document.querySelector('meta[name="viewport"]')!;
+  
+  const [viewPortSize, setViewPortSize] = useState({
+    content: 'width=device-width, initial-scale=1, maximum-scale=2'
+  });
+
 
   useEffect(() => {
-    viewport.setAttribute('content', viewPortSize);
-  }, [viewPortSize]);
+    console.log('inside effect');
+    viewport.setAttribute('content', viewPortSize.content);
+    console.log(viewport);
+  }, []);
 
-  console.log('inside:', viewport);
 
   const handelClick = (() => {
+    viewport.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1');
+    console.log('set',viewport);
     setIsClicked(false);
     bodyScroll.enable();
-    setViewPortSize('width=device-width, initial-scale=1, maximum-scale=1');
+    // setViewPortSize({...viewPortSize,
+    //   content: 'width=device-width, initial-scale=1, maximum-scale=1'
+    // });
   })
 
   return (
