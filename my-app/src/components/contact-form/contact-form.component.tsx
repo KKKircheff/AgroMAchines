@@ -2,7 +2,6 @@ import FormInputField from "../form-input-field/form-input-field.component.";
 import FormTextArea from "../form-text-area-field/form-text-area.component";
 import Button from "../button/button.component"
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 import './contact-form.style.scss'
 
@@ -30,7 +29,6 @@ const fieldsRegex: FieldsRegex = {
 
 export default function ContatForm() {
 
-  const navigate = useNavigate();
   const [formValues, setFormValues] = useState(contactInfo);
   const [isFormValid, setIsFormValid] = useState(true);
   const [errorMessage,setErrorMessage] = useState('');

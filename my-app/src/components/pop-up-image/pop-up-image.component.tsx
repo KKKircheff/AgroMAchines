@@ -15,7 +15,8 @@ const PopUpImage = ({ url, isClicked, setIsClicked }: PopUpProps) => {
   const handelClick=(()=>{
     setIsClicked(false);
     bodyScroll.enable();
-  })
+    console.log(window.visualViewport);    
+    })
   
   return (
     <div
