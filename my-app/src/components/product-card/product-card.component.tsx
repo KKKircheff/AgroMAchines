@@ -3,6 +3,7 @@ import { GiWaterRecycling } from 'react-icons/gi'
 import PopUpImage from '../pop-up-image/pop-up-image.component'
 // import CarouselSlider from '../carousel-slider/carousel-slider.component';
 import './product.card.style.scss';
+import  {useToggleContext} from '../../App';
 const CarouselSlider = React.lazy(() => import('../carousel-slider/carousel-slider.component'));
 
 type CardProps = {
@@ -17,7 +18,8 @@ type CardProps = {
 
 
 const ProductCard = ({ url, mainTitle, title, subtitle, content, price, imgSide }: CardProps) => {
-
+  const {toggleView, setToggleView} = useToggleContext() || {};
+  
   const [isClicked, setIsClicked] = useState(false);
   const [popUpUrl, setPopUpUrl] = useState('');
 
