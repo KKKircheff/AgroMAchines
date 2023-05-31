@@ -4,6 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { isMobile } from 'react-device-detect';
 import { renderArrowNext, renderArrowPrev, renderIndicator } from '../../utils/custom_carousel_controls';
 import './carousel-slider.styles.scss';
+const bodyScroll = require('body-scroll-toggle');
 
 type SliderProps = {
     url: string[];
@@ -18,6 +19,7 @@ const CarouselSlider = ({url,isClicked,setIsClicked,setPopUpUrl}:SliderProps) =>
       console.log(url[e]);
       setPopUpUrl(url[e])
       setIsClicked(true);
+      bodyScroll.disable();
     }
 
     const renderImages:() => JSX.Element[] = () => {

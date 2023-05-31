@@ -1,6 +1,5 @@
 import React from 'react';
 import './content-card.style.scss';
-import AOS from 'aos';
 
 type CardProps = {
   url: string,

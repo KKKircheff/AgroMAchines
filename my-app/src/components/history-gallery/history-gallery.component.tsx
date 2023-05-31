@@ -9,6 +9,7 @@ import { fullGalleryData } from '../../application-data/gallery-data';
 import './history-gallery.component.scss'
 import { ClickHandlerProps } from 'react-photo-album';
 import PopUpImage from '../pop-up-image/pop-up-image.component';
+const bodyScroll = require('body-scroll-toggle');
 
 type Photo = {
   src: string,
@@ -28,6 +29,7 @@ const HistoryGallery = () => {
   const handleClick = (e: ClickHandlerProps<Photo>) => {
     setClickedUrl(e.photo.src);
     setIsClicked(true);
+    bodyScroll.disable();
   }
 
   // This block extracts all the sizes of the images on the remote hosting by url
