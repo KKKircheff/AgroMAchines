@@ -135,7 +135,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         <div className="buttons-container">
           <Button type='submit' buttonType={'default'}>изпрати</Button>
         </div>
-       { !isFormValid && <div className="form-error-message">{errorMessage}</div>}
+       {!isFormValid && <div className="form-error-message">{errorMessage}</div>}
       </form>
     </div>
   )
