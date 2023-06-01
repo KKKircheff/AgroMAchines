@@ -73,6 +73,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
             setErrorMessage('Грешно въведен телефонен номер!');
             return
            }
+           alert('Вашето запитване е прието. Ще се свържем с вас в рамките на един работен ден.')
     clearFormFields();
   }
 
