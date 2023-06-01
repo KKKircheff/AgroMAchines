@@ -7,7 +7,7 @@ export interface Item {
   }
   
  export const items: Item[] = [
-    { name: 'за нас', url: 'header-home-page-wrapper', offset:0, contentPosition:1 },
+    { name: 'за нас', url: 'main-wrapper', offset:0, contentPosition:1 },
     { name: 'актуални оферти', url: 'product-card-wrapper',offset:-50, contentPosition:2 },
     // { name: 'високонапорни помпи', url: 'product-card-wrapper',offset:100, contentPosition:3 },
     { name: 'галерия', url: 'history-gallery-wrapper', offset:-100, contentPosition:4 },
