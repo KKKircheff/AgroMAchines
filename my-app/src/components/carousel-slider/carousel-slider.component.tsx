@@ -47,7 +47,11 @@ const CarouselSlider = ({ url, isClicked, setIsClicked, setPopUpUrl }: SliderPro
   const renderImages: () => JSX.Element[] = () => {
     return url.map((imageUrl, index) => {
       return (
-        <div key={imageUrl} className='slider-image-container' onClick={(e) => handleClick(e)}>
+        <div key={imageUrl}
+             className='slider-image-container' 
+             onClick={(e) => handleClick(e)}
+             style={{ touchAction: "auto"}}
+             >
           <img src={imageUrl} alt='поливна макра система втора употреба снимки' />
         </div>
       )

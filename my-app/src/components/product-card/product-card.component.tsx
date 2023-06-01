@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { GiWaterRecycling } from 'react-icons/gi'
 import PopUpImage from '../pop-up-image/pop-up-image.component'
 // import CarouselSlider from '../carousel-slider/carousel-slider.component';
 import './product.card.style.scss';
