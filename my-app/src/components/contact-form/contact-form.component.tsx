@@ -22,7 +22,6 @@ const fieldsRegex: FieldsRegex = {
    company: /^[A-Za-z\u0400-\u04FF\s\d-]{0,35}$/,
    email: /^[A-Za-z\u0400-\u04FF0-9._%+-@]{0,40}$/,
    phoneNumber:/^[0-9+\-()\s]{0,20}$/,
-  //  phoneNumber:/^[0-9+-()\s]{0,20}$/,
    message: /^[\s\S]{0,400}$/,
    fullPhoneNumber: /^\+?\d{1,3}[-.\s]?\(?\d{1,3}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}$/,
    fullEmailAddress: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
@@ -74,7 +73,8 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
             setErrorMessage('Грешно въведен телефонен номер!');
             return
            }
-           alert('Вашето запитване е прието. Ще се свържем с вас в рамките на един работен ден.')
+
+    alert('Вашето запитване е прието. Ще се свържем с вас в рамките на един работен ден.')
     clearFormFields();
   }
 
@@ -88,7 +88,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         data-netlify='true'
         onSubmit={handleSubmit}
       >
-        <input type="hidden" name="form-name" value="ccontact-form__v1" />
+        <input type="hidden" name="form-name" value='contact-form__v1' />
         <FormInputField
           label='Имена'
           type='text'
