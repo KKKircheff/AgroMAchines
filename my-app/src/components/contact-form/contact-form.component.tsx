@@ -18,14 +18,14 @@ interface FieldsRegex {
 }
 
 const fieldsRegex: FieldsRegex = {
-  name: /^[A-Za-z\s]{0,35}$/,
-  company: /^[A-Za-z\s\d-]{0,35}$/,
-  email: /^[A-Za-z0-9._%+-@]{0,40}$/,
-  phoneNumber:/^[0-9+\-()\s]{0,20}$/,
-  message: /^.{0,400}$/,
-  fullPhoneNumber: /^\+?\d{1,3}[-.\s]?\(?\d{1,3}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}$/,
-  fullEmailAddress: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
-}
+      name: /^[A-Za-zА-Яа-я\s]{0,35}$/,
+      company: /^[A-Za-zА-Яа-я\s\d-]{0,35}$/,
+      email: /^[A-Za-zА-Яа-я0-9._%+-@]{0,40}$/,
+      phoneNumber:/^[0-9+-()\s]{0,20}$/,
+      message: /^[\s\S]{0,400}$/,
+      fullPhoneNumber: /^\+?\d{1,3}[-.\s]?\(?\d{1,3}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}$/,
+      fullEmailAddress: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+    }
 
 export default function ContatForm() {
 
