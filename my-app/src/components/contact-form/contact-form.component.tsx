@@ -37,44 +37,42 @@ export default function ContatForm() {
     setFormValues(contactInfo);
   }
 
-  const validateField = (regex: RegExp, value: string) => {
+const validateField = (regex: RegExp, value: string) => {
      return regex.test(value);
   }
 
-  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     const { name, value } = event.target;
     setIsFormValid(true);
     const isValidFieldValue = validateField(fieldsRegex[name], value);
-
-    if (!isValidFieldValue) {
+           if (!isValidFieldValue) {
                return 
-           }
+              }
     setFormValues({
-         ...formValues,
-         [name]: value,
-         });
+             ...formValues,
+             [name]: value,
+             });
   }
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
     const { name, email, message, phoneNumber } = formValues;
 
     if (!name || !email || !phoneNumber || !message) {
-      setIsFormValid(false);
-      setErrorMessage("Моля попълнете всички задължителни полетa във формата!");
-      return;
-    }
+            setIsFormValid(false);
+            setErrorMessage("Моля попълнете всички задължителни полетa във формата!");
+            return;
+            }
     if (!validateField(fieldsRegex.fullEmailAddress,email)) {
-      setIsFormValid(false);
-      setErrorMessage('Грешно въведен мейл адреса!');
-      return
+            setIsFormValid(false);
+            setErrorMessage('Грешно въведен мейл адреса!');
+            return
     }
     if (!validateField(fieldsRegex.fullPhoneNumber,phoneNumber)) {
-      setIsFormValid(false);
-      setErrorMessage('Грешно въведен телефонен номер!');
-      return
-    }
+            setIsFormValid(false);
+            setErrorMessage('Грешно въведен телефонен номер!');
+            return
+           }
     clearFormFields();
   }
 
@@ -82,7 +80,12 @@ export default function ContatForm() {
     <div id='contact-form-container' className="contact-form-container" data-aos="fade-int">
       <h2>Контакт с нас</h2>
       <p>ако имате въпрос относно някой от нашите продукти или имате нужда от съдействие в Нидерландия за закупуване на земеделска техника</p>
-      <form onSubmit={handleSubmit}>
+      <form 
+        name='contact-form__v1'
+        method='post'
+        data-netlify='true'
+        onSubmit={handleSubmit}
+      >
         <FormInputField
           label='Имена'
           type='text'
