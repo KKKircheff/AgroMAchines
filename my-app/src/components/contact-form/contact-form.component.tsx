@@ -87,6 +87,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         data-netlify='true'
         onSubmit={handleSubmit}
       >
+        <input type="hidden" name="form-name" value="ccontact-form__v1" />
         <FormInputField
           label='Имена'
           type='text'
