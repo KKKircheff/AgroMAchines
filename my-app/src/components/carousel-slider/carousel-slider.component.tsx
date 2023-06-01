@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
-import { renderArrowNext, renderArrowPrev, renderIndicator } from '../../utils/custom_carousel_controls';
+// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 import { isMobile } from 'react-device-detect';
 
@@ -56,37 +54,11 @@ const CarouselSlider = ({ url, isClicked, setIsClicked, setPopUpUrl }: SliderPro
     })
   }
 
-         // --- Carousel  handle click
-         // const handleClick = (e: number) => {
-         //   console.log(url[e]);
-         //   setPopUpUrl(url[e])
-         //   setIsClicked(true);
-         //   bodyScroll.disable();
-         // }
-
   return (
     <div className="carousel-slider-wrapper">
-
       <Slider {...sliderSettings}>
         {renderImages()}
       </Slider>
-
-
-      {/* <Carousel
-            renderArrowPrev={renderArrowPrev}
-            renderArrowNext={renderArrowNext}
-            renderIndicator={renderIndicator}
-            axis={'horizontal'}
-            infiniteLoop={true}
-            emulateTouch={true}
-            showThumbs={false}
-            swipeable={true}
-            showStatus={false}
-            showArrows={!isMobile}
-            onClickItem={handleClick}
-          >{renderImages()}
-          </Carousel> */}
-
     </div>
   )
 }

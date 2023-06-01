@@ -46,7 +46,8 @@ const ProductCard = ({ url, mainTitle, title, subtitle, content, price, imgSide 
             <p>избрана оферта</p>
           </div>
           <div className="top-banner-icon-section" data-aos="fade-left">
-            <p><GiWaterRecycling /></p>
+            <p>agro</p>
+            <p>machines</p>
           </div>
           <div className="title-group" data-aos="zoom-in">
             <h2 className='product-card-title'>{mainTitle}</h2>
