@@ -28,7 +28,7 @@ export default function SlickNextArrow(props:SlickArrowProps) {
                  backgroundColor: 'transparent',
                  fontSize:'30px',
                  color:'white',
-                 zIndex: 4,
+                 zIndex: 1,
                  top: 'calc(50% - 50px)',
                  width: 30,
                  height: 30,
