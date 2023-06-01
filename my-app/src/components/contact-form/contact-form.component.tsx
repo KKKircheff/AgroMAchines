@@ -54,8 +54,15 @@ const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputEl
              });
   }
 
+  const encode = (data:any) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+ 
     const { name, email, message, phoneNumber } = formValues;
 
     if (!name || !email || !phoneNumber || !message) {
@@ -74,7 +81,19 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
             return
            }
 
-    alert('Вашето запитване е прието. Ще се свържем с вас в рамките на един работен ден.')
+           fetch(`/`, {
+            method: `POST`,
+            headers: { 'Content-Type': `application/x-www-form-urlencoded` },
+            body: encode({
+                'form-name': 'contact-form__v1',
+                values:formValues,
+            }),
+        })
+            .then((response) => {
+              console.log(response);
+              alert('Вашето запитване е прието. Ще се свържем с вас в рамките на един работен ден')
+            })
+            .catch(error => alert(`Error: ${error}`))     
     clearFormFields();
   }
 
@@ -86,7 +105,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         name='contact-form__v1'
         method='post'
         data-netlify='true'
-        onSubmit={handleSubmit}
+        onSubmit={(e)=>{return handleSubmit(e)}}
       >
         <input type="hidden" name="form-name" value='contact-form__v1' />
         <FormInputField
