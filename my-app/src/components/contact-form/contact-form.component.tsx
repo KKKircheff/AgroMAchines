@@ -64,7 +64,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
  
     const { name, email, message, phoneNumber } = formValues;
-
+    console.log('values:', formValues);
     if (!name || !email || !phoneNumber || !message) {
             setIsFormValid(false);
             setErrorMessage("Моля попълнете всички задължителни полетa във формата!");
@@ -86,7 +86,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
             headers: { 'Content-Type': `application/x-www-form-urlencoded` },
             body: encode({
                 'form-name': 'contact-form__v1',
-                values:formValues,
+                ...formValues,
             }),
         })
             .then((response) => {
