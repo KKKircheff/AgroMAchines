@@ -8,7 +8,7 @@ import './contact-form.style.scss'
 const contactInfo = {
   name: '',
   company: '',
-  phoneNumber: '',
+  phonenumber: '',
   email: '',
   message: ''
 }
@@ -21,7 +21,7 @@ const fieldsRegex: FieldsRegex = {
    name: /^[A-Za-z\u0400-\u04FF\s]{0,35}$/,
    company: /^[A-Za-z\u0400-\u04FF\s\d-]{0,35}$/,
    email: /^[A-Za-z\u0400-\u04FF0-9._%+-@]{0,40}$/,
-   phoneNumber:/^[0-9+\-()\s]{0,20}$/,
+   phonenumber:/^[0-9+\-()\s]{0,20}$/,
    message: /^[\s\S]{0,400}$/,
    fullPhoneNumber: /^\+?\d{1,3}[-.\s]?\(?\d{1,3}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}$/,
    fullEmailAddress: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
@@ -63,9 +63,9 @@ const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputEl
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
  
-    const { name, email, message, phoneNumber } = formValues;
+    const { name, email, message, phonenumber } = formValues;
     console.log('values:', formValues);
-    if (!name || !email || !phoneNumber || !message) {
+    if (!name || !email || !phonenumber || !message) {
             setIsFormValid(false);
             setErrorMessage("Моля попълнете всички задължителни полетa във формата!");
             return;
@@ -75,7 +75,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
             setErrorMessage('Грешно въведен мейл адреса!');
             return
     }
-    if (!validateField(fieldsRegex.fullPhoneNumber,phoneNumber)) {
+    if (!validateField(fieldsRegex.fullPhoneNumber,phonenumber)) {
             setIsFormValid(false);
             setErrorMessage('Грешно въведен телефонен номер!');
             return
@@ -129,10 +129,10 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         <FormInputField
           label='Телефон за контакт'
           type='text'
-          name='phoneNumber'
+          name='phonenumber'
           autoComplete='off'
           onChange={handleChange}
-          value={formValues.phoneNumber}
+          value={formValues.phonenumber}
         />
 
         <FormInputField
