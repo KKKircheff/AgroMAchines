@@ -12,81 +12,81 @@ import PopUpImage from '../pop-up-image/pop-up-image.component';
 const bodyScroll = require('body-scroll-toggle');
 
 type Photo = {
-  src: string,
-  width: number,
-  height: number,
-  spacing?: number,
-  padding?: number,
-  targetRowHeight?: number
+    src: string,
+    width: number,
+    height: number,
+    spacing?: number,
+    padding?: number,
+    targetRowHeight?: number
 }
 
 const HistoryGallery = () => {
 
- // eslint-disable-next-line
-  const [photos, setPhotos] = useState<Photo[]>(fullGalleryData);
-  const [isClicked, setIsClicked] = useState(false);
-  const [clickedUrl, setClickedUrl] = useState('');
+    // eslint-disable-next-line
+    const [photos, setPhotos] = useState<Photo[]>(fullGalleryData);
+    const [isClicked, setIsClicked] = useState(false);
+    const [clickedUrl, setClickedUrl] = useState('');
 
-  const imageHeigth = (window.innerWidth<720) 
-                      ? 300
-                      : 150
+    const imageHeigth = (window.innerWidth < 720)
+        ? 300
+        : 150
 
-  
-  const handleClick = (e: ClickHandlerProps<Photo>) => {
-    setClickedUrl(e.photo.src);
-    setIsClicked(true);
-    bodyScroll.disable();
-  }
 
-  // This block extracts all the sizes of the images on the remote hosting by url
-  // Then the object is stored in photos and console.logged 
-  // just copy object from 'inspect' / console and paste as fullGaleryData 
+    const handleClick = (e: ClickHandlerProps<Photo>) => {
+        setClickedUrl(e.photo.src);
+        setIsClicked(true);
+        bodyScroll.disable();
+    }
 
-  //   useEffect(() => {
-  //     async function fetchPhotos() {
-  //       const fetchedPhotos = await Promise.all(
-  //         galleryData.map(async (url) => {
-  //           const size = await getImageSize(url);
-  //           return {
-  //             src: url,
-  //             width: size.width,
-  //             height: size.height,
-  //           };
-  //         })
-  //       );
-  //       setPhotos(fetchedPhotos);
-  //     }
+    // This block extracts all the sizes of the images on the remote hosting by url
+    // Then the object is stored in photos and console.logged 
+    // just copy object from 'inspect' / console and paste as fullGaleryData 
 
-  //     fetchPhotos();
-  //   }, []);
-  //  console.log(photos);
+    //   useEffect(() => {
+    //     async function fetchPhotos() {
+    //       const fetchedPhotos = await Promise.all(
+    //         galleryData.map(async (url) => {
+    //           const size = await getImageSize(url);
+    //           return {
+    //             src: url,
+    //             width: size.width,
+    //             height: size.height,
+    //           };
+    //         })
+    //       );
+    //       setPhotos(fetchedPhotos);
+    //     }
 
-  return (
-    <div id='history-gallery-wrapper' className="history-gallery-wrapper">
+    //     fetchPhotos();
+    //   }, []);
+    //  console.log(photos);
 
-      {isClicked &&
-       <PopUpImage
-        url={clickedUrl}
-        isClicked={isClicked}
-        setIsClicked={setIsClicked}
-      />
-      }
-      <h2 data-aos='fade-right'>доставени поливни макари</h2>
-      <h3 data-aos='fade-right' data-aos-delay="100">от Agro-machines</h3>
+    return (
+        <div id='history-gallery-wrapper' className="history-gallery-wrapper">
 
-      <div className='history-gallery' data-aos='fade-in'>
-        {photos.length
-          ? <PhotoAlbum
-            layout="rows"
-            targetRowHeight={imageHeigth}
-            photos={photos}
-            spacing={10}
-            onClick={(e) => handleClick(e)}
-          />
-          : <div></div>}
-      </div>
-    </div>
-  )
+            {isClicked &&
+                <PopUpImage
+                    url={clickedUrl}
+                    isClicked={isClicked}
+                    setIsClicked={setIsClicked}
+                />
+            }
+            <h2 data-aos='fade-right'>доставени поливни макари</h2>
+            <h3 data-aos='fade-right' data-aos-delay="100">от Agro-machines</h3>
+
+            <div className='history-gallery' data-aos='fade-in'>
+                {photos.length
+                    ? <PhotoAlbum
+                        layout="rows"
+                        targetRowHeight={imageHeigth}
+                        photos={photos}
+                        spacing={10}
+                        onClick={(e) => handleClick(e)}
+                    />
+                    : <div></div>}
+            </div>
+        </div>
+    )
 }
 
 export default HistoryGallery

@@ -15,11 +15,11 @@ interface NavigationProps {
 
 const Navigation = ({ items }: NavigationProps) => {
 
-    
+
     const [isToggled, setIsToggled] = useState(false);
     const [closeSubMenu, setCloseSubMenu] = useState(false);
     const [isTransparentNavbar, setIsTransparentNavbar] = useState(false);
-    
+
     const rootRef = useRef<HTMLDivElement | null>(null);
     const screenSizes = {
         small: 720
@@ -28,8 +28,8 @@ const Navigation = ({ items }: NavigationProps) => {
     const toggleSubMenu = (event: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
         event.currentTarget.classList.toggle('toggled');
     }
-    
-    const calculateDuration = ()=>{
+
+    const calculateDuration = () => {
         return (1500);
     }
 
@@ -38,14 +38,14 @@ const Navigation = ({ items }: NavigationProps) => {
         <li key={index}>
             {item.url
                 ? <Link
-                      activeClass="active"
-                      to={item.url}
-                      spy={false}
-                      smooth={true} 
-                      offset={item.offset}
-                      duration={calculateDuration}
-                  onClick={() => closeMenu(true)}>{item.name}
-                  </Link>
+                    activeClass="active"
+                    to={item.url}
+                    spy={false}
+                    smooth={true}
+                    offset={item.offset}
+                    duration={calculateDuration}
+                    onClick={() => closeMenu(true)}>{item.name}
+                </Link>
                 : <span onClick={toggleSubMenu}>
                     {item.name}
                     <FaAngleDown className='submenu-dropdown-icon' />
@@ -60,7 +60,7 @@ const Navigation = ({ items }: NavigationProps) => {
         <ul className="sub-menu">
             {children.map((child, index) => (
                 <li key={index}>
-                    <Link to={child.url!}  onClick={() => closeMenu(true)}>
+                    <Link to={child.url!} onClick={() => closeMenu(true)}>
                         {child.name}
                     </Link>
                 </li>
@@ -71,8 +71,8 @@ const Navigation = ({ items }: NavigationProps) => {
     const closeMenu = (closeSubMenu = false) => {
         setIsToggled(false);
         if (closeSubMenu && window.innerWidth > screenSizes.small) {
-             setCloseSubMenu(true)
-             setTimeout(() => setCloseSubMenu(false), 0)
+            setCloseSubMenu(true)
+            setTimeout(() => setCloseSubMenu(false), 0)
         }
     }
 
