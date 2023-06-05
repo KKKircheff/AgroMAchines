@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 3vw 0 0 0;
+    padding:16vw 0;
     background: linear-gradient(to bottom, #ffffff 0%, $background-color 100%);
 }
 
@@ -18,7 +18,7 @@
     .counter-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        padding: 50px 15px;
+        padding: 8vw 15px;
     }
 }
 
@@ -32,9 +32,11 @@
 
 .logos-image-container {
     margin: 0;
+    padding: 8vw 0;;
     background: linear-gradient(to top, #ffffff 0%, $background-color 100%);
 
     img {
+        mix-blend-mode: multiply;
         margin: 8vw 0;
         width: 100%;
     }

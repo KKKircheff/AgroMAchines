@@ -2,7 +2,7 @@ export const counetrsContent = [
     {
         'countFrom': 0,
         'countTo': 33,
-        'content': 'средно увеличение на земеделския добива!',
+        'content': 'средно увеличение на земеделския добив!',
         'countAddOn': '%',
     },
     {

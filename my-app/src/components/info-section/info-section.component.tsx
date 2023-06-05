@@ -41,7 +41,7 @@ const InfoSection = () => {
                 })}
             </div>
             <div className="logos-image-container" data-aos="fade-in">
-                <img src="https://i.ibb.co/3pbDg6T/Logos-maller.png" alt="поливни макари марки" />
+                <img src="https://i.ibb.co/Z8T4cvr/second-hand-machines-brands-ordered-low-res.jpg" alt="поливни макари марки" />
             </div>
         </div>
     )
